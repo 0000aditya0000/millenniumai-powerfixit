@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+@import "tailwindcss";
+
+::selection {
+  background-color: #f0e68c; /* Light yellow */
+  color: #000; /* Black text */
+    }
+
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
+  --font-roboto-slab: 'Roboto Slab', serif;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-slow {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Slider Arrows Styling */
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  color: #b07a3c;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  top: 50%;            
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #b07a3c;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
