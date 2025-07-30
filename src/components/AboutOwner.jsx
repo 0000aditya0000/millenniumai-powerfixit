@@ -23,22 +23,22 @@ const owners = [
 
 const AboutOwner = () => {
   return (
-    <div className="py-16 bg-gradient-to-br from-[#f3e7d2] via-white to-[#f3e7d2]">
-      <h2 className="text-4xl font-bold text-center text-[#1a2341] mb-10 tracking-tight">
+    <div className="py-16 bg-gradient-to-br from-white via-[#96b0e0] to-white">
+      <h2 className="text-4xl font-bold text-center text-white mb-10 tracking-tight">
         Meet Our Leadership
       </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-10 px-4">
         {owners.map((owner, idx) => (
           <motion.div
             key={idx}
-            className="bg-white rounded-3xl shadow-xl border border-[#e5d3b3] p-8 flex flex-col items-center group hover:shadow-2xl transition-all duration-300"
+            className="bg-white rounded-3xl shadow-xl border border-black p-8 flex flex-col items-center group hover:shadow-2xl transition-all duration-300"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: idx * 0.12 }}
             whileHover={{ scale: 1.03 }}
           >
-            <div className="w-32 h-32 mb-5 rounded-full overflow-hidden shadow-lg border-4 border-[#b07a3c]">
+            <div className="w-32 h-32 mb-5 rounded-full overflow-hidden shadow-lg border-4 border-black">
               <motion.img
                 src={owner.image}
                 alt={owner.name}
@@ -47,16 +47,16 @@ const AboutOwner = () => {
                 transition={{ duration: 0.4 }}
               />
             </div>
-            <div className="text-xl font-bold text-[#1a2341] mb-1">
+            <div className="text-xl font-bold text-[#7895d0] mb-1">
               {owner.name}
             </div>
-            <div className="text-[#b07a3c] font-semibold mb-3">
+            <div className="text-black font-semibold mb-3">
               {owner.role}
             </div>
             <p className="text-[#4b4b4b] text-center text-sm px-4">
               {owner.bio}
             </p>
-            <div className="text-[#b07a3c] font-semibold mt-4">
+            <div className="text-black font-semibold mt-4">
               Contact: {owner.contact}
             </div>
           </motion.div>

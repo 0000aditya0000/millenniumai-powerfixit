@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-gradient-to-br from-[#f3e7d2] via-white to-[#f3e7d2] px-4 sm:px-8 relative overflow-hidden"
+      className="py-24 bg-gradient-to-br from-[#96b0e0] via-white to-[#96b0e0] px-4 sm:px-8 relative overflow-hidden"
     >
       {/* Decorative SVG blob */}
       <svg className="absolute left-0 bottom-0 w-60 h-60 opacity-20 blur-2xl -z-10" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -43,14 +43,14 @@ export default function Contact() {
       </svg>
       {/* Animated Decorative Props */}
       <motion.div
-        className="absolute top-10 left-10 w-16 h-16 rounded-full float-slow bg-[#b07a3c] opacity-30 z-0"
+        className="absolute top-10 left-10 w-16 h-16 rounded-full float-slow bg-[#7895d0] opacity-30 z-0"
         initial={{ scale: 0.5, opacity: 0, y: -30 }}
         whileInView={{ scale: 1, opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       />
       <motion.div
-        className="absolute top-32 right-16 w-10 h-10 rounded-full float-slow bg-[#1a2341] opacity-20 z-0"
+        className="absolute top-32 right-16 w-10 h-10 rounded-full float-slow bg-[#7895d0] opacity-20 z-0"
         initial={{ x: 40, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -59,17 +59,17 @@ export default function Contact() {
       
       
       <motion.div
-        className="absolute bottom-10 right-10 w-14 h-14 rounded-full  bg-[#b07a3c] opacity-20 z-0 float-slow"
+        className="absolute bottom-10 right-10 w-14 h-14 rounded-full  bg-[#7895d0] opacity-20 z-0 float-slow"
         initial={{ scale: 0.3, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.7 }}
       />
-      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center text-[#b07a3c] drop-shadow-lg tracking-tight">
+      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center text-white drop-shadow-lg tracking-tight">
         Get in Touch
       </h2>
       <motion.div
-        className="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-10 md:gap-0 bg-white/90 rounded-3xl shadow-2xl border-4 border-[#b07a3c] overflow-hidden backdrop-blur-md"
+        className="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-10 md:gap-0 bg-white/90 rounded-3xl shadow-2xl border-4 border-black overflow-hidden backdrop-blur-md"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -77,42 +77,42 @@ export default function Contact() {
       >
         {/* Contact Info Card */}
         <motion.div
-          className="flex-1 flex flex-col items-left justify-center p-8 md:p-12 bg-gradient-to-br from-[#f3e7d2] via-white to-[#f3e7d2] border-r-0 md:border-r-2 border-[#b07a3c] relative"
+          className="flex-1 flex flex-col items-left justify-center p-8 md:p-12 bg-gradient-to-br from-[#7895d0] via-[#96b0e0] to-[#7895d0] border-r-0 md:border-r-2 border-black relative"
           initial={{ x: -40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-extrabold text-[#b07a3c] mb-4 tracking-tight drop-shadow">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight drop-shadow">
             Power Fixit Tapes Industries
           </h3>
           <div className="flex items-start gap-3 mb-2">
-            <FaMapMarkerAlt className="text-[#b07a3c] text-xl mt-1" />
-            <p className="text-[#1a2341] font-semibold leading-tight text-left">
+            <FaMapMarkerAlt className="text-black text-xl mt-1" />
+            <p className="text-white font-semibold leading-tight text-left">
               Khasra No.649/1, Plot No. A 29-30, Achronda Industrial Area,<br />
               Village Achronda, Partapur, Meerut, 250103 (Uttar Pradesh)
             </p>
           </div>
           <div className="flex items-center gap-3 mb-1">
-            <FaPhoneAlt className="text-[#b07a3c] text-lg" />
-            <p className="text-lg font-bold text-[#1a2341]">9458201918, 9997028787</p>
+            <FaPhoneAlt className="text-black text-lg" />
+            <p className="text-lg font-bold text-white">9458201918, 9997028787</p>
           </div>
           <div className="flex items-center gap-3 mb-1">
-            <FaEnvelope className="text-[#b07a3c] text-lg" />
-            <p className="text-[#1a2341]">powerfixittapes@gmail.com</p>
+            <FaEnvelope className="text-black text-lg" />
+            <p className="text-white">powerfixittapes@gmail.com</p>
           </div>
           <div className="flex items-center gap-3 mb-1">
-            <FaGlobe className="text-[#b07a3c] text-lg" />
+            <FaGlobe className="text-black text-lg" />
             <a
               href="https://www.powerfixittapes.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#b07a3c] underline hover:text-[#a86b2d] text-center block"
+              className="text-white underline hover:text-black text-center block"
             >
               www.powerfixittapes.in
             </a>
           </div>
-          <p className="mt-6 italic text-lg text-[#1a2341] font-semibold text-center">
+          <p className="mt-6 italic text-lg text-black font-semibold text-center">
             Adhesives For Professionals Who Demand Excellence.
           </p>
         </motion.div>
@@ -135,7 +135,7 @@ export default function Contact() {
                 type="text"
                 name="name"
                 placeholder="Name"
-                className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b07a3c] bg-white/90 shadow-sm ${errors.name ? 'border-red-400' : 'border-[#b07a3c]'}`}
+                className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7895d0] bg-white/90 shadow-sm ${errors.name ? 'border-red-400' : 'border-black'}`}
                 value={form.name}
                 onChange={handleChange}
                 required
@@ -147,7 +147,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b07a3c] bg-white/90 shadow-sm ${errors.email ? 'border-red-400' : 'border-[#b07a3c]'}`}
+                className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7895d0] bg-white/90 shadow-sm ${errors.email ? 'border-red-400' : 'border-black'}`}
                 value={form.email}
                 onChange={handleChange}
                 required
@@ -158,7 +158,7 @@ export default function Contact() {
               type="tel"
               name="phone"
               placeholder="Phone (optional)"
-              className="w-full p-3 border-2 border-[#b07a3c] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b07a3c] bg-white/90 shadow-sm"
+              className="w-full p-3 border-2 border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7895d0] bg-white/90 shadow-sm"
               value={form.phone}
               onChange={handleChange}
             />
@@ -167,7 +167,7 @@ export default function Contact() {
                 name="message"
                 placeholder="Message"
                 rows="5"
-                className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b07a3c] bg-white/90 shadow-sm ${errors.message ? 'border-red-400' : 'border-[#b07a3c]'}`}
+                className={`w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7895d0] bg-white/90 shadow-sm ${errors.message ? 'border-red-400' : 'border-black'}`}
                 value={form.message}
                 onChange={handleChange}
                 required
@@ -176,7 +176,7 @@ export default function Contact() {
             </div>
             <motion.button
               type="submit"
-              className="bg-[#b07a3c] text-white px-8 py-3 rounded-full hover:bg-[#a86b2d] transition w-full font-bold text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-[#b07a3c]"
+              className="bg-[#7895d0] text-white px-8 py-3 rounded-full hover:bg-[#81a2e3] transition w-full font-bold text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-[#b07a3c]"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
             >

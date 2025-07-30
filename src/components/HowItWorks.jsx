@@ -8,7 +8,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="w-full bg-[#f3e7d2] py-16 px-4">
+    <section className="w-full bg-[#96b0e0] py-16 px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1a2341] mb-10">How It Works</h2>
         <div className="relative">
@@ -21,7 +21,7 @@ export default function HowItWorks() {
             transition={{ duration: 0.8, delay: 0.5 }}
             style={{
               transformOrigin: "left",
-              background: "linear-gradient(90deg, #b07a3c 0%, #f3e7d2 100%)",
+              background: "linear-gradient(90deg, #ffffff 0%, #5895d0 100%)",
               borderRadius: "9999px",
               height: "6px",
               zIndex: 0,
@@ -38,7 +38,7 @@ export default function HowItWorks() {
                 transition={{ duration: 0.6, delay: i * 0.08 }}
                 whileHover={{ scale: 1.07 }}
               >
-                <div className="w-12 h-12 rounded-full bg-[#b07a3c] text-white flex items-center justify-center text-2xl font-bold mb-2 relative z-20">
+                <div className="w-12 h-12 rounded-full bg-[#7895d0] text-white flex items-center justify-center text-2xl font-bold mb-2 relative z-20">
                   {s.step}
                 </div>
                 <div className="font-bold text-lg text-[#1a2341]">{s.title}</div>

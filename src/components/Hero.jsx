@@ -70,7 +70,7 @@ export default function Hero() {
                     {slide.headline}
                   </motion.h1>
                   <motion.p
-                    className="text-lg md:text-2xl max-w-2xl mb-8 font-medium text-white/90 text-center"
+                    className="text-lg md:text-2xl max-w-2xl mb-8 font-medium text-white text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
@@ -85,13 +85,13 @@ export default function Hero() {
                   >
                     <a
                       href="#services"
-                      className="bg-[#b07a3c] hover:bg-[#a86b2d] text-white font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center"
+                      className="bg-[#7895d0] hover:text-white text-black font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center border border-white"
                     >
                       View Our Products
                     </a>
                     <a
                       href="#contact"
-                      className="bg-white hover:bg-[#f3e7d2] text-[#1a2341] font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center border border-[#b07a3c]"
+                      className="bg-white hover:text-red-500 text-[#1a2341] font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center border border-red-500"
                     >
                       Get a Quote
                     </a>
@@ -102,7 +102,7 @@ export default function Hero() {
           ))}
         </Swiper>
       </div>
-      <motion.div initial={{ width:4000, height:4000}} animate={{width:0, height:0}} transition={{ duration: 0.8, delay: 0.5 }} className="absolute rounded-full bg-[#b07a3c] z-10"></motion.div>
+      <motion.div initial={{ width:4000, height:4000}} animate={{width:0, height:0}} transition={{ duration: 0.8, delay: 0.5 }} className="absolute rounded-full bg-[#96b0e0] z-10"></motion.div>
     </section>
   );
 }

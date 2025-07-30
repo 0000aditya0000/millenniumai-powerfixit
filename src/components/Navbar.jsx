@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { FaTape } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Logo left */}
         <div className="flex items-center gap-2">
           <img src={logo} alt="Power Fixit" className="w-16 h-10 object-cover" />
-          <span className="font-extrabold text-3xl text-white tracking-wide">Power Fixit</span>
+          <span className="font-extrabold text-3xl text-black tracking-wide">Power <span className="text-red-700">Fi<span className="text-black">x</span>it</span></span>
         </div>
         {/* Nav links center */}
         <div className="hidden md:flex flex-1 justify-center">
@@ -78,17 +78,17 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={e => handleNavClick(e, link.href)}
-                className={`relative px-2 py-1 group text-lg font-medium transition ${activeId === link.href ? 'text-[#b07a3c]' : 'text-white hover:text-[#b07a3c]'}`}
+                className={`relative px-2 py-1 group text-lg font-medium transition ${activeId === link.href ? 'text-red-600' : 'text-white hover:text-red-600'}`}
               >
                 {link.label}
-                <span className={`absolute left-0 -bottom-1 h-0.5 bg-gradient-to-r from-[#b07a3c] to-[#a86b2d] rounded-full transition-all duration-300 ${activeId === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                <span className={`absolute left-0 -bottom-1 h-0.5 bg-gradient-to-r from-red-700 to-red-900 rounded-full transition-all duration-300 ${activeId === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </a>
             ))}
           </div>
         </div>
         {/* CTA button right */}
         <div className="hidden md:flex">
-          <a href="#contact" onClick={e => handleNavClick(e, '#contact')} className="ml-6 bg-[#b07a3c] hover:bg-[#a86b2d] text-white font-bold px-6 py-2 rounded-full shadow transition text-lg">Get a Quote</a>
+          <a href="#contact" onClick={e => handleNavClick(e, '#contact')} className="ml-6 bg-white hover:text-red-500 text-black font-bold px-6 py-2 rounded-full shadow transition text-lg border border-red-500">Get a Quote</a>
         </div>
         {/* Hamburger for mobile */}
         <button className="md:hidden text-[#b07a3c] text-3xl ml-auto" onClick={() => setOpen(!open)} aria-label="Toggle menu">
