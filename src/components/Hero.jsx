@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import 'swiper/css/effect-coverflow';
+import { RiShakeHandsFill } from "react-icons/ri";
 
 
 import heroimg1 from "../assets/tape2.png";
@@ -61,6 +62,14 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1a2341]/80 via-[#1a2341]/30 to-transparent z-10 pointer-events-none top-0" />
                 {/* Text Content */}
                 <div className="relative z-20 flex flex-col items-center justify-center h-full min-h-[70vh] px-4">
+                  <motion.h2
+                    className="text-2xl md:text-4xl font-bold text-red-600 mb-4 text-center flex items-center justify-center gap-2"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    Jod Hamara <RiShakeHandsFill className="text-black"/> Bharosa Aapka
+                  </motion.h2>
                   <motion.h1
                     className="text-3xl md:text-5xl font-semibold font-roboto-slab mb-4 text-white text-center drop-shadow-lg"
                     initial={{ opacity: 0, y: 40 }}
@@ -70,7 +79,7 @@ export default function Hero() {
                     {slide.headline}
                   </motion.h1>
                   <motion.p
-                    className="text-lg md:text-2xl max-w-2xl mb-8 font-medium text-white text-center"
+                    className="text-lg md:text-2xl max-w-2xl mb-6 font-medium text-gray-200 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
@@ -85,13 +94,13 @@ export default function Hero() {
                   >
                     <a
                       href="#services"
-                      className="bg-[#7895d0] hover:text-white text-black font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center border border-white"
+                      className="bg-[#7895d0] hover:bg-[#6985bc] text-white font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center"
                     >
                       View Our Products
                     </a>
                     <a
                       href="#contact"
-                      className="bg-white hover:text-red-500 text-[#1a2341] font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center border border-red-500"
+                      className="bg-white hover:bg-[#acb6c7] text-black font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center border border-[#7895d0]"
                     >
                       Get a Quote
                     </a>
@@ -102,7 +111,7 @@ export default function Hero() {
           ))}
         </Swiper>
       </div>
-      <motion.div initial={{ width:4000, height:4000}} animate={{width:0, height:0}} transition={{ duration: 0.8, delay: 0.5 }} className="absolute rounded-full bg-[#96b0e0] z-10"></motion.div>
+      <motion.div initial={{ width: 4000, height: 4000 }} animate={{ width: 0, height: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="absolute rounded-full bg-[#96b0e0] z-10"></motion.div>
     </section>
   );
 }

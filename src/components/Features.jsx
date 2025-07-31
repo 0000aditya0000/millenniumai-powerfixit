@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: <FaCogs className="text-3xl text-black" />,
+    icon: <FaCogs className="text-3xl text-gray-500" />,
     title: "In-House Manufacturing",
     desc: "Direct control over quality and delivery.",
     details: [
@@ -13,7 +13,7 @@ const features = [
     ]
   },
   {
-    icon: <FaCertificate className="text-3xl text-black" />,
+    icon: <FaCertificate className="text-3xl text-gray-500" />,
     title: "ISO Certified",
     desc: "Internationally recognized quality standards.",
     details: [
@@ -23,7 +23,7 @@ const features = [
     ]
   },
   {
-    icon: <FaShippingFast className="text-3xl text-black" />,
+    icon: <FaShippingFast className="text-3xl text-gray-500" />,
     title: "Fast Delivery",
     desc: "Quick turnaround and reliable logistics.",
     details: [
@@ -33,7 +33,7 @@ const features = [
     ]
   },
   {
-    icon: <FaSmile className="text-3xl text-black" />,
+    icon: <FaSmile className="text-3xl text-gray-500" />,
     title: "Customer Satisfaction",
     desc: "Hundreds of happy clients across industries.",
     details: [
@@ -69,9 +69,9 @@ export default function Features() {
                 {f.icon}
               </motion.div>
               <div className="flex-1">
-                <div className="font-bold text-xl text-[#1a2341] mb-1">{f.title}</div>
+                <div className="font-bold text-xl text-black mb-1">{f.title}</div>
                 <div className="text-[#4b4b4b] text-base mb-2">{f.desc}</div>
-                <ul className="text-xs text-[#1a2341] list-disc list-inside">
+                <ul className="text-xs text-black list-disc list-inside">
                   {f.details && f.details.map((d, idx) => (
                     <li key={idx}>{d}</li>
                   ))}

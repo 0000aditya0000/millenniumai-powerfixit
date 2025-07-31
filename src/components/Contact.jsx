@@ -83,23 +83,23 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight drop-shadow">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-red-700 mb-4 tracking-tight drop-shadow">
             Power Fixit Tapes Industries
           </h3>
           <div className="flex items-start gap-3 mb-2">
             <FaMapMarkerAlt className="text-black text-xl mt-1" />
-            <p className="text-white font-semibold leading-tight text-left">
+            <p className="text-black font-semibold leading-tight text-left">
               Khasra No.649/1, Plot No. A 29-30, Achronda Industrial Area,<br />
               Village Achronda, Partapur, Meerut, 250103 (Uttar Pradesh)
             </p>
           </div>
           <div className="flex items-center gap-3 mb-1">
             <FaPhoneAlt className="text-black text-lg" />
-            <p className="text-lg font-bold text-white">9458201918, 9997028787</p>
+            <p className="text-lg font-bold text-black">9458201918, 9997028787</p>
           </div>
           <div className="flex items-center gap-3 mb-1">
             <FaEnvelope className="text-black text-lg" />
-            <p className="text-white">powerfixittapes@gmail.com</p>
+            <p className="text-black">powerfixittapes@gmail.com</p>
           </div>
           <div className="flex items-center gap-3 mb-1">
             <FaGlobe className="text-black text-lg" />
@@ -107,12 +107,12 @@ export default function Contact() {
               href="https://www.powerfixittapes.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white underline hover:text-black text-center block"
+              className="text-black underline hover:text-gray-700 text-center block"
             >
               www.powerfixittapes.in
             </a>
           </div>
-          <p className="mt-6 italic text-lg text-black font-semibold text-center">
+          <p className="mt-6 italic text-lg text-white font-semibold text-center">
             Adhesives For Professionals Who Demand Excellence.
           </p>
         </motion.div>
@@ -126,7 +126,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <p className="mb-4 text-lg text-[#1a2341] text-center md:text-left">
+          <p className="mb-4 text-lg text-black text-center md:text-left">
             Ready to order or have questions? Our team is here to help!
           </p>
           <form className="max-w-xl w-full mx-auto space-y-5" onSubmit={handleSubmit} noValidate>
@@ -176,7 +176,7 @@ export default function Contact() {
             </div>
             <motion.button
               type="submit"
-              className="bg-[#7895d0] text-white px-8 py-3 rounded-full hover:bg-[#81a2e3] transition w-full font-bold text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-[#b07a3c]"
+              className="bg-[#7895d0] text-white px-8 py-3 rounded-full hover:bg-[#6985bc] transition w-full font-bold text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-black"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
             >

@@ -36,16 +36,6 @@ const services = [
     ],
   },
   {
-    icon: <FaCar className="text-6xl text-black mb-4 mt-4" />,
-    title: "Automotive Tapes",
-    desc: "Heat and vibration resistant for trims and wire harnessing.",
-    features: [
-      "Withstands high temperatures",
-      "Reduces noise and vibration",
-      "Used in trims, wire harnessing",
-    ],
-  },
-  {
     icon: <FaEraser className="text-6xl text-black mb-4 mt-4" />,
     title: "Masking Tapes",
     desc: "Clean removal, high precision, and no residue.",
@@ -66,16 +56,6 @@ const services = [
     ],
   },
   {
-    icon: <FaTruck className="text-6xl text-black mb-4 mt-4" />,
-    title: "Logistics & Carton Sealing",
-    desc: "Secure, reliable, and easy to use for all box types.",
-    features: [
-      "Quick application",
-      "Strong hold for shipping",
-      "Suitable for all box types",
-    ],
-  },
-  {
     icon: <FaPalette className="text-6xl text-black mb-4 mt-4" />,
     title: "Color & Specialty Tapes",
     desc: "Highlight, code, or decorate with style.",
@@ -93,26 +73,6 @@ const services = [
       "High-temperature resistance",
       "Flexible and stretchable",
       "Ideal for automotive and electronics",
-    ],
-  },
-  {
-    icon: <FaBolt className="text-6xl text-black mb-4 mt-4" />,
-    title: "White Goods Tapes",
-    desc: "Durable, moisture-resistant, and long-lasting adhesion.",
-    features: [
-      "Used in appliances and electronics",
-      "Resistant to heat and moisture",
-      "Provides long-lasting adhesion",
-    ],
-  },
-  {
-    icon: <FaShieldAlt className="text-6xl text-black mb-4 mt-4" />,
-    title: "Surface Protection Tapes",
-    desc: "Protect surfaces from scratches and damage.",
-    features: [
-      "Ideal for glass, metal, and plastic surfaces",
-      "Easy to apply and remove",
-      "Long-lasting protection",
     ],
   },
   {
@@ -153,6 +113,16 @@ const services = [
       "Marks safety zones and aisles",
       "Highly visible colors",
       "Durable and easy to apply",
+    ],
+  },
+  {
+    icon: <FaPaintRoller className="text-6xl text-black mb-4 mt-4" />,
+    title: "Painter’s Masking Tape",
+    desc: "Clean lines and easy removal for painting.",
+    features: [
+      "Used in painting and surface protection",
+      "Removes cleanly after use",
+      "Available in various widths",
     ],
   },
 ];

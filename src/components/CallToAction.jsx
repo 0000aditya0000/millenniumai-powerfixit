@@ -18,7 +18,7 @@ export default function CallToAction() {
         <p className="text-black mb-6 leading-relaxed">Contact us today for a quote or to discuss your custom requirements.</p>
         <motion.a
           href="#contact"
-          className="bg-white text-black hover:text-red-700 font-bold px-8 py-3 rounded-full shadow-lg text-lg transition-all duration-200 inline-block focus:outline-none focus:ring-2 focus:ring-[#b07a3c] hover:scale-105"
+          className="bg-white text-black hover:bg-[#adc0dd] font-bold px-8 py-3 rounded-full shadow-lg text-lg transition-all duration-200 inline-block focus:outline-none focus:ring-2 focus:ring-[#b07a3c] hover:scale-105"
           whileHover={{ scale: 1.08, boxShadow: "0 8px 32px 0 rgba(176,122,60,0.25)" }}
           whileTap={{ scale: 0.97 }}
         >

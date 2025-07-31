@@ -10,7 +10,7 @@ export default function HowItWorks() {
   return (
     <section className="w-full bg-[#96b0e0] py-16 px-4">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1a2341] mb-10">How It Works</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10">How It Works</h2>
         <div className="relative">
           {/* Animated horizontal line for md+ screens */}
           <motion.div

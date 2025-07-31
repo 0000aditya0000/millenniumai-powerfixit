@@ -29,16 +29,6 @@ const generalTapes = [
     ],
   },
   {
-    title: "Automotive Tapes",
-    desc: "Heat & vibration resistant",
-    icon: <FaCar className="text-6xl text-black" />,
-    details: [
-      "Withstands high temperatures",
-      "Reduces noise and vibration",
-      "Used in trims, wire harnessing",
-    ],
-  },
-  {
     title: "Masking Tapes",
     desc: "Clean removal, high precision",
     icon: <FaEraser className="text-6xl text-black" />,
@@ -56,16 +46,6 @@ const generalTapes = [
       "Showcase your logo",
       "Enhance brand visibility",
       "Available in multiple colors",
-    ],
-  },
-  {
-    title: "Logistics & Carton Sealing",
-    desc: "Secure, reliable, and easy to use",
-    icon: <FaTruck className="text-6xl text-black" />,
-    details: [
-      "Quick application",
-      "Strong hold for shipping",
-      "Suitable for all box types",
     ],
   },
   {
@@ -88,26 +68,6 @@ const generalTapes = [
       "Ideal for automotive and electronics",
     ],
   },
-  {
-    title: "White Goods Tapes",
-    desc: "Durable and moisture-resistant",
-    icon: <FaBolt className="text-6xl text-black" />,
-    details: [
-      "Used in appliances and electronics",
-      "Resistant to heat and moisture",
-      "Provides long-lasting adhesion",
-    ],
-  },
-  {
-    title: "Surface Protection Tapes",
-    desc: "Protect surfaces from scratches and damage",
-    icon: <FaShieldAlt className="text-6xl text-black" />,
-    details: [
-      "Ideal for glass, metal, and plastic surfaces",
-      "Easy to apply and remove", 
-      "Long-lasting protection",
-    ],
-  }
 ];
 
 const specialtyTapes = [
@@ -168,35 +128,35 @@ export default function Services() {
 
       {/* Extra floating tape fragments */}
       <motion.div
-        className="absolute top-32 left-1/4 w-16 h-3 rounded bg-white opacity-10 z-0 rotate-12"
+        className="absolute top-32 left-1/4 w-16 h-3 rounded bg-[#7895d0] opacity-0 z-0 rotate-12"
         animate={{ y: [0, 30, 0], x: [0, 20, 0] }}
         transition={{ duration: 16, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         style={{ filter: 'blur(1.5px)' }}
       />
       <motion.div
-        className="absolute bottom-24 right-1/3 w-24 h-4 rounded bg-white opacity-10 z-0 -rotate-6"
+        className="absolute bottom-24 right-1/3 w-24 h-4 rounded bg-[#7895d0] opacity-0 z-0 -rotate-6"
         animate={{ y: [0, -25, 0], x: [0, -18, 0] }}
         transition={{ duration: 20, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         style={{ filter: 'blur(2px)' }}
       />
       <motion.div
-        className="absolute top-1/2 left-10 w-10 h-2 rounded bg-white opacity-10 z-0 rotate-3"
+        className="absolute top-1/2 left-10 w-10 h-2 rounded bg-[#7895d0] opacity-0 z-10 rotate-3"
         animate={{ y: [0, 15, 0], x: [0, 8, 0] }}
         transition={{ duration: 13, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         style={{ filter: 'blur(1px)' }}
       />
 
       {/* Tape roll SVG animation (bottom right) */}
-      <div className="absolute bottom-8 right-8 z-0 opacity-20 pointer-events-none select-none" style={{filter: 'blur(1px)'}}>
+      <div className="absolute bottom-8 right-8 z-0 opacity-50 pointer-events-none select-none" style={{filter: 'blur(1px)'}}>
         <svg width="160" height="120" viewBox="0 0 160 120" fill="#" xmlns="http://www.w3.org/2000/svg">
           {/* Tape roll */}
-          <circle cx="50" cy="60" r="32" fill="#f3e7d2" stroke="#b07a3c" strokeWidth="6" />
-          <circle cx="50" cy="60" r="16" fill="#fff" stroke="#b07a3c" strokeWidth="3" />
+          <circle cx="50" cy="60" r="32" fill="#fff" stroke="#7895d0" strokeWidth="6" />
+          <circle cx="50" cy="60" r="16" fill="#fff" stroke="#7895d0" strokeWidth="3" />
           {/* Tape strip (animated) */}
           <g>
             <motion.rect
               x="82" y="56" width="60" height="8" rx="4"
-              fill="#b07a3c"
+              fill="#fff"
               initial={{ x: 82 }}
               animate={{ x: [82, 100, 82] }}
               transition={{ duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }}
@@ -206,19 +166,19 @@ export default function Services() {
       </div>
       {/* Floating circles/icons */}
       <motion.div
-        className="absolute top-20 left-10 w-10 h-10 rounded-full bg-[#b07a3c] opacity-10 z-0"
+        className="absolute top-20 left-10 w-10 h-10 rounded-full bg-[#7895d0] opacity-100 z-0"
         animate={{ y: [0, 30, 0], x: [0, 10, 0] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         style={{ filter: 'blur(2px)' }}
       />
       <motion.div
-        className="absolute top-1/3 right-16 w-8 h-8 rounded-full bg-[#b07a3c] opacity-10 z-0"
+        className="absolute top-1/3 right-16 w-8 h-8 rounded-full bg-[#7895d0] opacity-100 z-0"
         animate={{ y: [0, -20, 0], x: [0, -10, 0] }}
         transition={{ duration: 14, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         style={{ filter: 'blur(2px)' }}
       />
       <motion.div
-        className="absolute bottom-40 left-1/2 w-12 h-12 rounded-full bg-[#b07a3c] opacity-10 z-0"
+        className="absolute bottom-40 left-1/2 w-12 h-12 rounded-full bg-[#7895d0] opacity-100 z-0"
         animate={{ y: [0, 18, 0], x: [0, 12, 0] }}
         transition={{ duration: 18, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         style={{ filter: 'blur(2px)', transform: 'translateX(-50%)' }}
@@ -234,7 +194,7 @@ export default function Services() {
             have the perfect tape for your needs.
           </p>
           <div className="mb-12 relative">
-            <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">
+            <h3 className="text-2xl font-bold text-gray-500 mb-6 tracking-tight">
               General Tapes
             </h3>
             {/* Horizontal line behind cards */}
@@ -264,10 +224,10 @@ export default function Services() {
                     <div className="font-bold text-lg text-white mt-3 mb-1 tracking-tight">
                       {t.title}
                     </div>
-                    <div className="text-[#4b4b4b] text-md mb-2 leading-relaxed">
+                    <div className="text-gray-700 text-md mb-2 leading-relaxed">
                       {t.desc}
                     </div>
-                    <ul className="text-md text-left text-[#1a2341] mb-2 list-disc list-inside">
+                    <ul className="text-md text-left text-black mb-2 list-disc list-inside">
                       {t.details &&
                         t.details.map((d, idx) => <li key={idx}>{d}</li>)}
                     </ul>
@@ -277,14 +237,14 @@ export default function Services() {
             </div>
           </div>
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">
+            <h3 className="text-2xl font-bold text-gray-500 mb-6 tracking-tight">
               Specialty Tapes
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {specialtyTapes.map((t, i) => (
                 <motion.div
                   key={i}
-                  className="flex flex-col items-center bg-[#7895d0] rounded-xl p-6 shadow-md border border-[#e5d3b3] hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer text-center overflow-hidden min-h-[340px] h-full w-full"
+                  className="flex flex-col items-center bg-[#7895d0] rounded-xl p-6 shadow-md border border-[#7895d0] hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer text-center overflow-hidden min-h-[340px] h-full w-full"
                   initial={{ opacity: 0,  }}
                   whileInView={{ opacity: 1, }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -304,10 +264,10 @@ export default function Services() {
                   <div className="font-bold text-lg text-white mt-3 mb-1 tracking-tight">
                     {t.title}
                   </div>
-                  <div className="text-[#1a2341] text-sm mb-2 leading-relaxed">
+                  <div className="text-gray-700 text-sm mb-2 leading-relaxed">
                     {t.desc}
                   </div>
-                  <ul className="text-xs text-left text-[#1a2341] mb-2 list-disc list-inside">
+                  <ul className="text-xs text-left text-black mb-2 list-disc list-inside">
                     {t.details &&
                       t.details.map((d, idx) => <li key={idx}>{d}</li>)}
                   </ul>
@@ -318,7 +278,7 @@ export default function Services() {
           <div className="flex flex-col items-center mt-8">
             <motion.a
               href="#contact"
-              className="inline-block bg-white hover:text-red-500 text-black font-bold px-10 py-4 rounded-full shadow-lg text-lg transition-all duration-200 text-center mb-8 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#b07a3c]"
+              className="inline-block bg-[#7895d0] hover:bg-[#6985bc] text-white font-bold px-10 py-4 rounded-full shadow-lg text-lg transition-all duration-200 text-center mb-8 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#7895d0]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

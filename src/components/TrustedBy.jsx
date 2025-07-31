@@ -13,7 +13,7 @@ export default function TrustedBy() {
   return (
     <section className="w-full relative bg-gradient-to-br from-white to-[#96b0e0] py-8 border-t border-b border-gray-200">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
-        <div className="uppercase text-xs tracking-widest text-gray-400 mb-2">Trusted By</div>
+        <div className="uppercase text-xs tracking-widest text-gray-600 font-bold mb-2">Trusted By</div>
         <div className="text-lg font-semibold text-black mb-4 text-center">Leading brands across industries trust our tapes for reliability and performance.</div>
         <div className="flex gap-10 md:gap-16 text-gray-700 text-base justify-center items-center">
           {trusted.map((t, i) => (
