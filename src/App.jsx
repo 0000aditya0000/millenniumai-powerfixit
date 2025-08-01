@@ -11,6 +11,7 @@ import CallToAction from "./components/CallToAction";
 import AboutOwner from "./components/AboutOwner";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ServicesPage from "./pages/ServicesPage";
+import ServiceDetail from "./pages/ServiceDetail";
 
 function MainHome() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainHome />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
