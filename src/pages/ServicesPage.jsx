@@ -306,8 +306,8 @@ const tapeRollSVG = (
         cx="50"
         cy="60"
         r="32"
-        fill="#f3e7d2"
-        stroke="#b07a3c"
+        fill="#acb6c7"
+        stroke="#6985bc"
         strokeWidth="6"
       />
       <circle
@@ -315,7 +315,7 @@ const tapeRollSVG = (
         cy="60"
         r="16"
         fill="#fff"
-        stroke="#b07a3c"
+        stroke="#6985bc"
         strokeWidth="3"
       />
       <motion.rect
@@ -324,7 +324,7 @@ const tapeRollSVG = (
         width="60"
         height="8"
         rx="4"
-        fill="#b07a3c"
+        fill="#6985bc"
         initial={{ x: 82 }}
         animate={{ x: [82, 100, 82] }}
         transition={{
@@ -340,7 +340,7 @@ const tapeRollSVG = (
 
 const CustomCTA = () => (
   <motion.section
-    className="w-full bg-[#1a2341] py-16 px-4 flex flex-col items-center justify-center text-center rounded-3xl shadow-lg my-16"
+    className="w-full bg-[#7895d0] py-16 px-4 flex flex-col items-center justify-center text-center rounded-3xl shadow-lg my-16"
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.2 }}
@@ -349,14 +349,14 @@ const CustomCTA = () => (
     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
       Ready to Upgrade Your Packaging?
     </h2>
-    <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+    <p className="text-lg text-black mb-8 max-w-2xl mx-auto leading-relaxed">
       Get in touch for a free consultation or to request a custom tape sample.
       Our experts are here to help you find the perfect solution for your
       business.
     </p>
     <motion.a
       href="/contact"
-      className="inline-block bg-[#b07a3c] hover:bg-[#a86b2d] text-white font-bold px-10 py-4 rounded-full shadow-lg text-lg transition-all duration-200 text-center focus:outline-none focus:ring-2 focus:ring-[#b07a3c] hover:scale-105 relative overflow-hidden"
+      className="inline-block bg-white hover:bg-[#acb6c7] text-black font-bold px-10 py-4 rounded-full shadow-lg text-lg transition-all duration-200 text-center focus:outline-none focus:ring-2 focus:ring-[#b07a3c] hover:scale-105 relative overflow-hidden"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.97 }}
       onClick={(e) => {
@@ -401,21 +401,21 @@ function AnimatedStat({ value, label }) {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-lg border border-amber-200 hover:shadow-xl transition-shadow duration-300"
+      className="flex flex-col items-center justify-center p-6 bg-[#7895d0] rounded-2xl shadow-lg border border-gray-600 hover:shadow-xl transition-shadow duration-300"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       whileHover={{ scale: 1.05 }}
     >
       <motion.span
-        className="text-4xl md:text-5xl font-bold text-amber-600 mb-2"
+        className="text-4xl md:text-5xl font-bold text-white mb-2"
         initial={{ scale: 0 }}
         animate={inView ? { scale: 1 } : { scale: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         {inView ? <AnimatedNumber value={value} /> : 0}
       </motion.span>
-      <span className="text-lg text-slate-700 font-semibold">{label}</span>
+      <span className="text-lg text-black font-semibold">{label}</span>
     </motion.div>
   );
 }
@@ -438,10 +438,10 @@ function AnimatedNumber({ value }) {
 
 const ServicesPage = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-gradient-to-br from-[#7895d0] to-white min-h-screen">
       {/* Hero Section */}
       <motion.section
-        className="relative w-full py-20 px-4 pt-40 flex flex-col items-center justify-center bg-[#b07a3ca5] overflow-hidden"
+        className="relative w-full py-20 px-4 pt-40 flex flex-col items-center justify-center bg-[#6985bc] overflow-hidden"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -451,33 +451,31 @@ const ServicesPage = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
             Premium Tape Solutions
           </h1>
-          <p className="text-lg md:text-xl text-[#4b4b4b] mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg font-semibold md:text-xl text-black mb-8 max-w-2xl mx-auto leading-relaxed">
             Discover our full range of{" "}
-            <span className="font-semibold text-[#b07a3c]">general</span> and{" "}
-            <span className="font-semibold text-[#b07a3c]">
-              specialty tapes
-            </span>
-            , engineered for <span className="font-semibold">reliability</span>,{" "}
+            <span className="font-semibold text-white">general</span> and{" "}
+            <span className="font-semibold text-white">specialty tapes</span>,
+            engineered for <span className="font-semibold">reliability</span>,{" "}
             <span className="font-semibold">performance</span>, and your unique
             business needs. From{" "}
-            <span className="font-semibold text-[#b07a3c]">packaging</span> to{" "}
-            <span className="font-semibold text-[#b07a3c]">insulation</span>, we
+            <span className="font-semibold text-white">packaging</span> to{" "}
+            <span className="font-semibold text-white">insulation</span>, we
             have the perfect tape for you.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <span className="inline-flex items-center px-4 py-2 bg-[#f3e7d2] text-[#b07a3c] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
               🏆 Industry Leading Quality
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-[#f3e7d2] text-[#b07a3c] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
               🚚 Fast Delivery
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-[#f3e7d2] text-[#b07a3c] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
               🛡️ Custom Solutions
             </span>
           </div>
           <a
             href="#services"
-            className="inline-block mt-2 px-8 py-3 bg-[#b07a3c] text-white font-bold rounded-full shadow-lg hover:bg-[#a06a2c] transition-colors duration-200"
+            className="inline-block mt-2 px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg hover:bg-[#acb6c7] transition-colors duration-200"
           >
             Explore Our Tapes
           </a>
@@ -489,7 +487,7 @@ const ServicesPage = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill="#b07a3c"
+            fill="#fffff"
             d="M44.8,-67.2C57.2,-59.2,65.2,-44.8,70.2,-29.7C75.2,-14.7,77.2,1,72.2,14.7C67.2,28.3,55.2,39.8,42.2,48.2C29.2,56.7,14.6,62.1,-0.7,62.9C-16,63.7,-32,59.9,-44.2,51.1C-56.4,42.3,-64.8,28.5,-68.2,13.6C-71.6,-1.3,-70,-17.2,-62.7,-29.7C-55.4,-42.2,-42.4,-51.3,-28.2,-58.2C-14,-65.1,1.4,-69.8,16.7,-70.2C32,-70.6,44.8,-67.2,44.8,-67.2Z"
             transform="translate(100 100)"
           />
@@ -523,10 +521,8 @@ const ServicesPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">
-            Our Services
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+          <p className="text-lg text-black max-w-2xl mx-auto">
             Comprehensive tape solutions for every industry and application
           </p>
         </motion.div>
@@ -552,7 +548,7 @@ const ServicesPage = () => {
               <Link to={`/services/${service.slug}`} className="group">
                 <motion.div
                   key={index}
-                  className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-amber-200 cursor-pointer text-center h-[450px] group overflow-hidden"
+                  className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-[#7895d0] cursor-pointer text-center h-[450px] group overflow-hidden"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -574,17 +570,17 @@ const ServicesPage = () => {
                     perspective: "1000px",
                   }}
                 >
-                  {/* Animated gradient overlay */}
+                  {/* Gradient Overlay */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-amber-600/0 via-amber-600/0 to-amber-600/20 rounded-2xl"
+                    className="absolute inset-0 bg-gradient-to-br from-[#acb6c7]/0 via-[#acb6c7]/0 to-[#7895d0]/20 rounded-2xl"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: isHovered ? 1 : 0 }}
                     transition={{ duration: 0.5 }}
                   />
 
-                  {/* Animated background circles */}
+                  {/* Background Circles */}
                   <motion.div
-                    className="absolute -top-20 -right-20 w-40 h-40 bg-amber-100 rounded-full"
+                    className="absolute -top-20 -right-20 w-40 h-40 bg-[#7895d0] rounded-full"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{
                       opacity: isHovered ? 0.6 : 0,
@@ -594,7 +590,7 @@ const ServicesPage = () => {
                     transition={{ duration: 0.7 }}
                   />
                   <motion.div
-                    className="absolute -bottom-20 -left-20 w-32 h-32 bg-amber-200 rounded-full"
+                    className="absolute -bottom-20 -left-20 w-32 h-32 bg-[#acb6c7] rounded-full"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{
                       opacity: isHovered ? 0.4 : 0,
@@ -604,16 +600,15 @@ const ServicesPage = () => {
                     transition={{ duration: 0.5 }}
                   />
 
-                  {/* Shimmer effect */}
+                  {/* Shimmer */}
                   <div className="absolute inset-0 shimmer rounded-2xl" />
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col items-center h-full">
-                    {/* Animated Icon Container */}
+                    {/* Icon */}
                     <div className="relative mb-6">
-                      {/* Pulsing background */}
                       <motion.div
-                        className="absolute inset-0 bg-amber-600 rounded-full -m-4"
+                        className="absolute inset-0 bg-[#7895d0] rounded-full -m-4"
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{
                           scale: isHovered ? 1.2 : 0,
@@ -621,10 +616,8 @@ const ServicesPage = () => {
                         }}
                         transition={{ duration: 0.3 }}
                       />
-
-                      {/* Rotating ring */}
                       <motion.div
-                        className="absolute inset-0 border-2 border-amber-600 rounded-full -m-2"
+                        className="absolute inset-0 border-2 border-[#7895d0] rounded-full -m-2"
                         initial={{ rotate: 0, opacity: 0 }}
                         animate={{
                           rotate: isHovered ? 360 : 0,
@@ -636,9 +629,8 @@ const ServicesPage = () => {
                           ease: "linear",
                         }}
                       />
-
                       <motion.div
-                        className="relative z-10 w-20 h-20 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center shadow-xl"
+                        className="relative z-10 w-20 h-20 bg-gradient-to-br from-[#7895d0] to-[#acb6c7] rounded-full flex items-center justify-center shadow-xl"
                         whileHover={{ scale: 1.1, rotate: 10 }}
                         transition={{ duration: 0.3 }}
                       >
@@ -651,9 +643,9 @@ const ServicesPage = () => {
                       </motion.div>
                     </div>
 
-                    {/* Animated Title */}
+                    {/* Title */}
                     <motion.div
-                      className="font-bold text-xl text-slate-800 mb-3 tracking-tight overflow-hidden"
+                      className="font-bold text-xl text-black mb-3 tracking-tight overflow-hidden"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
@@ -661,7 +653,7 @@ const ServicesPage = () => {
                       {service.title.split("").map((char, idx) => (
                         <motion.span
                           key={idx}
-                          className="inline-block group-hover:text-amber-600 transition-colors duration-300"
+                          className="inline-block group-hover:text-[#7895d0] transition-colors duration-300"
                           initial={{ y: 20, opacity: 0 }}
                           whileInView={{ y: 0, opacity: 1 }}
                           transition={{ delay: idx * 0.03, duration: 0.3 }}
@@ -674,7 +666,7 @@ const ServicesPage = () => {
 
                     {/* Description */}
                     <motion.div
-                      className="text-slate-600 text-base mb-6 leading-relaxed"
+                      className="text-[#333] text-base mb-6 leading-relaxed"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
@@ -682,9 +674,9 @@ const ServicesPage = () => {
                       {service.desc}
                     </motion.div>
 
-                    {/* Animated Feature List */}
+                    {/* Features */}
                     <motion.ul
-                      className="text-left mx-auto text-slate-700 text-sm space-y-2 max-w-xs flex-grow"
+                      className="text-left mx-auto text-black text-sm space-y-2 max-w-xs flex-grow"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.2 }}
@@ -701,7 +693,7 @@ const ServicesPage = () => {
                         service.features.map((feature, idx) => (
                           <motion.li
                             key={idx}
-                            className="flex items-center space-x-3 p-2 rounded-lg group-hover:bg-amber-50 transition-colors duration-300"
+                            className="flex items-center space-x-3 p-2 rounded-lg group-hover:bg-[#acb6c7]/30 transition-colors duration-300"
                             variants={{
                               hidden: { opacity: 0, x: -20, scale: 0.8 },
                               visible: {
@@ -717,11 +709,11 @@ const ServicesPage = () => {
                             }}
                           >
                             <motion.div
-                              className="w-3 h-3 bg-amber-600 rounded-full flex-shrink-0"
+                              className="w-3 h-3 bg-[#7895d0] rounded-full flex-shrink-0"
                               whileHover={{ scale: 1.5 }}
                               transition={{ duration: 0.2 }}
                             />
-                            <span className="group-hover:text-amber-700 transition-colors duration-300">
+                            <span className="group-hover:text-[#7895d0] transition-colors duration-300">
                               {feature}
                             </span>
                           </motion.li>
@@ -729,6 +721,7 @@ const ServicesPage = () => {
                     </motion.ul>
                   </div>
 
+                  {/* Shimmer CSS */}
                   <style jsx>{`
                     .shimmer {
                       position: relative;
