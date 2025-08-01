@@ -62,24 +62,57 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1a2341]/80 via-[#1a2341]/30 to-transparent z-10 pointer-events-none top-0" />
                 {/* Text Content */}
                 <div className="relative z-20 flex flex-col items-center justify-center h-full min-h-[70vh] px-4">
-                  <motion.h2
+                  {/* <motion.h2
                     className="text-2xl md:text-4xl font-bold text-red-600 mb-4 text-center flex items-center justify-center gap-2"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                   >
                     Jod Hamara <RiShakeHandsFill className="text-black"/> Bharosa Aapka
-                  </motion.h2>
-                  <motion.h1
-                    className="text-3xl md:text-5xl font-semibold font-roboto-slab mb-4 text-white text-center drop-shadow-lg"
+                  </motion.h2> */}
+
+                  <motion.h1 className="text-2xl md:text-5xl font-bold text-red-600 mb-6 text-center flex items-center justify-center gap-2">
+                    <motion.span
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-white font-extrabold animate-pulse [text-shadow:0_0_10px_rgba(255,0,0,0.7),0_0_20px_rgba(255,0,0,0.5)]"
+                    >
+                      Jod Hamara
+                    </motion.span>
+
+                    {/* 🤝 icon */}
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                      className="inline-flex items-center justify-center"
+                    >
+                      <RiShakeHandsFill className="text-yellow-400 text-3xl md:text-5xl drop-shadow-lg mx-2 animate-pulse" />
+                    </motion.div>
+
+
+                    {/* भरोसा */}
+                    <motion.span
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      className="text-white font-extrabold animate-pulse [text-shadow:0_0_10px_rgba(255,0,0,0.7),0_0_20px_rgba(255,0,0,0.5)]"
+                    >
+                      Bharosa Aapka
+                    </motion.span>
+                  </motion.h1>
+
+                  <motion.h2
+                    className="text-3xl md:text-4xl font-semibold font-roboto-slab mb-4 text-white text-center drop-shadow-lg"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.7 }}
                   >
                     {slide.headline}
-                  </motion.h1>
+                  </motion.h2>
                   <motion.p
-                    className="text-lg md:text-2xl max-w-2xl mb-6 font-medium text-gray-200 text-center"
+                    className="text-lg md:text-2xl max-w-2xl mb-6 font-medium text-gray-300 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
