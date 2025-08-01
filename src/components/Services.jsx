@@ -198,13 +198,13 @@ export default function Services() {
               General Tapes
             </h3>
             {/* Horizontal line behind cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 relative z-10">
+            <div className="flex justify-center flex-wrap gap-8 relative z-10">
               {generalTapes.map((t, i) => (
                 <div className="relative flex flex-col items-center">
                   {/* Vertical connector from card to horizontal line */}
                   <motion.div
                     key={i}
-                    className="flex flex-col items-center bg-[#7895d0] rounded-xl p-6 shadow-md border border-[#f3e7d2] hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer text-center overflow-hidden relative z-10 min-h-[410px] h-full w-full"
+                    className="flex flex-col items-center bg-[#7895d0] rounded-xl p-6 shadow-md border border-[#f3e7d2] hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer text-center overflow-hidden relative z-10 min-h-[410px] h-full w-[300px] sm:w-[320px] md:w-[340px]"
                     initial={{ opacity: 0,}}
                     whileInView={{ opacity: 1,}}
                     viewport={{ once: true, amount: 0.2 }}
