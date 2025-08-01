@@ -1,5 +1,5 @@
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -7,32 +7,51 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import tapeimg1 from '../assets/tape-photos/nexa-tape.jpeg'
-import tapeimg2 from '../assets/tape-photos/bhopa-tape.jpeg'
-import tapeimg3 from '../assets/tape-photos/maruti-tape.jpeg'
-import tpaeimg4 from '../assets/tape-photos/redrock-tape.jpeg'
-import tapeimg5 from '../assets/tape-photos/snapdo.jpeg'
+import tapeimg1 from '../assets/tape-photos/img1.jpeg'
+import tapeimg2 from '../assets/tape-photos/img2.jpeg'
+import tapeimg3 from '../assets/tape-photos/img3.jpeg'
+import tapeimg5 from '../assets/tape-photos/img5.jpeg'
+import tapeimg7 from '../assets/tape-photos/img7.jpeg'
+import tapeimg8 from '../assets/tape-photos/img8.jpeg'
+import tapeimg10 from '../assets/tape-photos/img10.jpeg'
+import tapeimg11 from '../assets/tape-photos/img11.jpeg'
+
 import { image, img } from "motion/react-client";
 
-const crousels = [{ img: tapeimg1 }, { img: tapeimg2 }, { img: tapeimg3 }, { img: tpaeimg4 }, { img: tapeimg5 },];
+const crousels = [{ img: tapeimg1 }, { img: tapeimg2 }, { img: tapeimg3 }, { img: tapeimg5 },
+  , { img: tapeimg7 }, { img: tapeimg8 }, { img: tapeimg10 }, { img: tapeimg11 },
+];
 
 
 export default function Footer() {
 
   return (<>
     <section className="bg-[#96b0e0] p-8">
-      <div className="w-6xl m-auto">
+      <div className="w-full m-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-6">Our Printed Tapes</h2>
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          modules={[Pagination, Scrollbar, Autoplay]}
           style={{ position: "relative", paddingBottom: "50px" }}
-          spaceBetween={50}
-          slidesPerView={4}
+          spaceBetween={20}
+          slidesPerView={2}
           autoplay={{
             delay: 1000,
             disableOnInteraction: false,
           }}
           loop={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+            1280: { slidesPerView: 6,
+            }
+          }}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
         >
@@ -56,5 +75,3 @@ export default function Footer() {
   </>
   );
 }
-
-// from-[#7895d0] via-white to-[#96b0e0]
