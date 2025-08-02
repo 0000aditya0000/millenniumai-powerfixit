@@ -20,12 +20,12 @@ function MainHome() {
         <Hero />
       </div>
       <TrustedBy />
-      <div id="services">
+      {/* <div id="services">
         <Services />
-      </div>
-      <div id="about">
+      </div> */}
+      {/* <div id="about">
         <Features />
-      </div>
+      </div> */}
       <HowItWorks />
       <AboutOwner />
       <CallToAction />
@@ -44,6 +44,8 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<MainHome />} />
+          <Route path="/about" element={<Features />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
         </Routes>

@@ -463,13 +463,13 @@ const ServicesPage = () => {
             have the perfect tape for you.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-gray-200 text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
               🏆 Industry Leading Quality
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-gray-200 text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
               🚚 Fast Delivery
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-gray-200 text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
               🛡️ Custom Solutions
             </span>
           </div>
@@ -545,7 +545,7 @@ const ServicesPage = () => {
             };
 
             return (
-              <Link to={`/services/${service.slug}`} className="group">
+              <Link key={service.slug || index} to={`/services/${service.slug}`} className="group">
                 <motion.div
                   key={index}
                   className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-[#7895d0] cursor-pointer text-center h-[450px] group overflow-hidden"
@@ -601,7 +601,7 @@ const ServicesPage = () => {
                   />
 
                   {/* Shimmer */}
-                  <div className="absolute inset-0 shimmer rounded-2xl" />
+                  <div className="shimmer absolute inset-0 rounded-2xl" />
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col items-center h-full">
@@ -722,7 +722,7 @@ const ServicesPage = () => {
                   </div>
 
                   {/* Shimmer CSS */}
-                  <style jsx>{`
+                  <style jsx="true">{`
                     .shimmer {
                       position: relative;
                       overflow: hidden;

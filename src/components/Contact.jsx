@@ -83,7 +83,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-extrabold text-red-700 mb-4 tracking-tight drop-shadow">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight drop-shadow">
             Power Fixit Tapes Industries
           </h3>
           <div className="flex items-start gap-3 mb-2">

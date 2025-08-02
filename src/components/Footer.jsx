@@ -10,16 +10,13 @@ import 'swiper/css/scrollbar';
 import tapeimg1 from '../assets/tape-photos/img1.jpeg'
 import tapeimg2 from '../assets/tape-photos/img2.jpeg'
 import tapeimg3 from '../assets/tape-photos/img3.jpeg'
-import tapeimg5 from '../assets/tape-photos/img5.jpeg'
-import tapeimg7 from '../assets/tape-photos/img7.jpeg'
-import tapeimg8 from '../assets/tape-photos/img8.jpeg'
 import tapeimg10 from '../assets/tape-photos/img10.jpeg'
 import tapeimg11 from '../assets/tape-photos/img11.jpeg'
 
 import { image, img } from "motion/react-client";
 
-const crousels = [{ img: tapeimg1 }, { img: tapeimg2 }, { img: tapeimg3 }, { img: tapeimg5 },
-  , { img: tapeimg7 }, { img: tapeimg8 }, { img: tapeimg10 }, { img: tapeimg11 },
+const crousels = [{ img: tapeimg1 }, { img: tapeimg2 }, { img: tapeimg3 },
+  { img: tapeimg10 }, { img: tapeimg11 },
 ];
 
 
@@ -47,17 +44,18 @@ export default function Footer() {
               slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 5,
+              slidesPerView: 4,
             },
-            1280: { slidesPerView: 6,
+            1280: { slidesPerView: 4,
             }
           }}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          className="max-w-7xl"
         >
           {crousels.map((crousel, idx) => (
             <SwiperSlide key={idx}>
-              <img src={crousel.img} alt={image} className="h-40" />
+              <img src={crousel.img} alt={image} className="h-40 w-60" />
             </SwiperSlide>
           ))}
         </Swiper>

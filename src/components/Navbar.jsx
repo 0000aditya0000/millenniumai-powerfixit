@@ -5,8 +5,8 @@ import logo from "../assets/logo111.png";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "About", href: "/about" },
+  { label: "Testimonials", href: "/testimonials" },
 ];
 
 // Custom hook for scrollspy
@@ -67,7 +67,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo left */}
         <div className="flex items-center gap-2">
-          <img src={logo} alt="Power Fixit" className="w-35 h-11 object-fill rounded-xl" />
+          <img src={logo} alt="Power Fixit" className="w-40 h-11 object-fill rounded-xl" />
           {/* <span className="font-extrabold text-3xl text-black tracking-wide">Power <span className="text-red-700">Fi<span className="text-black">x</span>it</span></span> */}
         </div>
         {/* Nav links center */}
@@ -78,17 +78,17 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={e => handleNavClick(e, link.href)}
-                className={`relative px-2 py-1 group text-lg font-medium transition ${activeId === link.href ? 'text-red-600' : 'text-white hover:text-red-600'}`}
+                className={`relative px-2 py-1 group text-lg font-medium transition ${activeId === link.href ? 'text-red-600' : 'text-white hover:text-gray-200'}`}
               >
                 {link.label}
-                <span className={`absolute left-0 -bottom-1 h-0.5 bg-gradient-to-r from-red-500 to-red-800 rounded-full transition-all duration-300 ${activeId === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                <span className={`absolute left-0 -bottom-0.5 h-0.5 bg-gradient-to-r from-gray-200 to-gray-500 rounded-full transition-all duration-300 ${activeId === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </a>
             ))}
           </div>
         </div>
         {/* CTA button right */}
         <div className="hidden md:flex">
-          <a href="#contact" onClick={e => handleNavClick(e, '#contact')} className="ml-6 bg-[#7895d0] hover:bg-[#6985bc] text-white font-bold px-6 py-2 rounded-full shadow transition text-lg">Get a Quote</a>
+          <a href="#contact" onClick={e => handleNavClick(e, '#contact')} className="ml-6 bg-white hover:bg-[#a2b4d2] text-[#6985bc] font-semibold px-6 py-2 rounded-full shadow transition text-lg">Get a Quote</a>
         </div>
         {/* Hamburger for mobile */}
         <button className="md:hidden text-white text-3xl ml-auto" onClick={() => setOpen(!open)} aria-label="Toggle menu">
