@@ -20,12 +20,12 @@ function MainHome() {
         <Hero />
       </div>
       <TrustedBy />
-      {/* <div id="services">
+      <div id="services">
         <Services />
-      </div> */}
-      {/* <div id="about">
+      </div>
+      <div id="about">
         <Features />
-      </div> */}
+      </div>
       <HowItWorks />
       <AboutOwner />
       <CallToAction />
