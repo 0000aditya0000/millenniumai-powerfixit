@@ -24,6 +24,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { useMotionValue, animate } from "framer-motion";
 import { Link } from "react-router-dom";
+import CustomTape from "../components/CustomTape";
 
 export const services = [
   {
@@ -463,13 +464,13 @@ const ServicesPage = () => {
             have the perfect tape for you.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <span className="inline-flex items-center px-4 py-2 bg-gray-200 text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
               🏆 Industry Leading Quality
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-gray-200 text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
               🚚 Fast Delivery
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-gray-200 text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
               🛡️ Custom Solutions
             </span>
           </div>
@@ -506,6 +507,8 @@ const ServicesPage = () => {
           <AnimatedStat key={i} value={stat.value} label={stat.label} />
         ))}
       </motion.section>
+
+      <CustomTape/> 
 
       {/* Services Grid */}
       <motion.section

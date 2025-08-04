@@ -62,7 +62,7 @@ export default function Navbar() {
 
   return (
     <nav className={
-      `absolute top-0 left-0 right-0 z-10 bg-transparent bg-opacity-90  transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`
+      `absolute top-0 left-0 right-0 z-50 bg-transparent bg-opacity-90  transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`
     }>
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo left */}

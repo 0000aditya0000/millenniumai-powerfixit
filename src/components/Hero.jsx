@@ -1,14 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { RiShakeHandsFill } from "react-icons/ri";
-import img1 from "../assets/hero-photos/img11.png";
-import img2 from "../assets/hero-photos/img22.png";
-import img3 from "../assets/hero-photos/img333.png";
-import img4 from "../assets/hero-photos/img4.png";
-import img5 from "../assets/hero-photos/img5.png";
-import img6 from "../assets/hero-photos/img6.png";
-// import img from "../assets/hero-photos/img.png";
-
+import img1 from "../assets/hero-photos/pic55.jpeg";
+import img2 from "../assets/hero-photos/pic3.jpeg";
+import img3 from "../assets/hero-photos/pic1.jpeg";
+import img4 from "../assets/hero-photos/pic4.jpeg";
+import img5 from "../assets/hero-photos/img55.png";
+import img6 from "../assets/hero-photos/pic2.jpeg";
 
 const carouselImages = [
   {
@@ -137,27 +135,20 @@ export default function Hero() {
             animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
+          <h1
+            className="lg:absolute xl:top-10 xl:-left-10 text-3xl md:text-5xl lg:text-[45px] font-extrabold leading-tight text-white mb-4 libertinus-serif-bold"
+          >
+            Jod Hamra{" "}
+            <span className="text-blue-950 inline-block">
+              <RiShakeHandsFill />
+            </span>{" "}
+            Bharosa Aapka
+          </h1>
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Left: Main Content */}
             <div className="text-left">
-              {/* <div className="inline-block px-4 py-2 mb-8 rounded-full border border-[#acb6c7] bg-white">
-                <span className="text-base font-semibold text-[#6985bc]">
-                  Welcome to Millennium Tapes
-                </span>
-              </div> */}
-              <h1 className="text-2xl md:text-4xl lg:text-4xl font-extrabold mb-4 leading-tight text-black">
-                {/* Jod Hamra{" "} */}
-                <span className="text-white inline-block">
-                  {/* <RiShakeHandsFill /> */}
-                </span>{" "}
-                {/* Bharosa Aapka */}
-                {/* <span className="text-transparent bg-clip-text bg-black">
-                    Adhesive Tapes
-                  </span> */}
-              </h1>
-              {/* <span className="absolute -bottom-2 left-0 w-full h-1 rounded-full bg-gradient-to-r from-[#6985bc] via-[#7895d0] to-[#acb6c7]"></span> */}
               <div className="flex items-center mb-6">
-                <span className="text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#96b0e0]">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#96b0e0]">
                   <Typewriter
                     words={[
                       "Custom Tape Solutions for your Business",
@@ -191,26 +182,6 @@ export default function Hero() {
                   </button>
                 </a>
               </div>
-
-              {/* Stats */}
-              {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-16">
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2 text-[#6985bc]">20+</div>
-                  <div className="text-sm text-[#7895d0]">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2 text-[#6985bc]">500+</div>
-                  <div className="text-sm text-[#7895d0]">Clients Served</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2 text-[#6985bc]">1,000+</div>
-                  <div className="text-sm text-[#7895d0]">Shipments Delivered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2 text-[#6985bc]">24/7</div>
-                  <div className="text-sm text-[#7895d0]">Support</div>
-                </div>
-              </div> */}
             </div>
             {/* Right: Carousel */}
             <div className="relative hidden lg:block">
@@ -255,8 +226,8 @@ export default function Hero() {
                 {/* Carousel */}
                 <div className="relative bg-white/80 rounded-3xl p-8 border-4 border-[#6985bc] shadow-2xl h-full flex flex-col justify-between">
                   {/* Company Name Top Border */}
-                  <div className="absolute top-0 px-2 text-blue-800 font-bold tracking-wide text-xl pointer-events-none">
-                    PowerFixit Tape Industry
+                  <div className="absolute top-0 px-2 text-[#6985bc] font-bold tracking-wide text-xl pointer-events-none">
+                    Power-Fixit Tape Industries
                   </div>
                   {/* Carousel Image & Content */}
                   <div
@@ -291,11 +262,6 @@ export default function Hero() {
                         </div>
                       </div>
                     </div>
-                    {/* Navigation dots & prev/next buttons... (your existing code) */}
-                  </div>
-                  {/* Slogan Bottom Border */}
-                  <div className="absolute bottom-0 px-2 text-blue-800 font-bold tracking-wide text-2xl pointer-events-none">
-                    Jod Hamara <span className="text-black inline-block"><RiShakeHandsFill /></span> Bharosa Aapka
                   </div>
                 </div>
               </div>

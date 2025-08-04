@@ -81,13 +81,13 @@ const ServiceDetail = () => {
             <span className="font-semibold text-white">insulation</span>, we have the perfect tape for you.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
               🏆 Industry Leading Quality
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
               🚚 Fast Delivery
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-[#acb6c7] text-[#6985bc] font-semibold rounded-full shadow-sm text-base">
+            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
               🛡️ Custom Solutions
             </span>
           </div>
