@@ -263,9 +263,9 @@ export const services = [
 
 const stats = [
   { value: 17, label: "Years of Experience" },
-  { value: 50, label: "Clients Served" },
+  { value: 500, label: "Clients Served" },
   { value: 20, label: "Tape Variants" },
-  { value: 15, label: "Industries Covered" },
+  { value: 150, label: "Industries Covered" },
 ];
 
 const CustomCTA = () => (
