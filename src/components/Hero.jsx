@@ -136,7 +136,7 @@ export default function Hero() {
           }`}
         >
           <h1
-            className="lg:absolute xl:top-10 xl:-left-10 text-3xl md:text-5xl lg:text-[45px] font-extrabold leading-tight text-white mb-4 libertinus-serif-bold"
+            className="lg:absolute xl:top-10 xl:-left-10 text-3xl md:text-5xl lg:text-4xl xl:text-[45px] font-extrabold leading-tight text-white mb-4 libertinus-serif-bold"
           >
             Jod Hamra{" "}
             <span className="text-blue-950 inline-block">

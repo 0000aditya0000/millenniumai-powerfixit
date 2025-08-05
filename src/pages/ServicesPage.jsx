@@ -508,20 +508,19 @@ const ServicesPage = () => {
         ))}
       </motion.section>
 
-      <CustomTape/> 
+      <CustomTape />
 
       {/* Services Grid */}
       <motion.section
         className="max-w-7xl mx-auto py-16 px-4"
         initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
@@ -548,21 +547,31 @@ const ServicesPage = () => {
             };
 
             return (
-              <Link key={service.slug || index} to={`/services/${service.slug}`} className="group">
+              <Link
+                key={service.slug || index}
+                to={`/services/${service.slug}`}
+                className="group"
+              >
                 <motion.div
                   key={index}
                   className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-[#7895d0] cursor-pointer text-center h-[450px] group overflow-hidden"
                   initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    x: mousePosition.x,
+                    y: mousePosition.y,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    type: "spring",
+                    stiffness: 150,
+                    damping: 15,
+                  }}
                   onMouseMove={handleMouseMove}
                   onMouseLeave={handleMouseLeave}
                   onMouseEnter={() => setIsHovered(true)}
-                  animate={{
-                    x: mousePosition.x,
-                    y: mousePosition.y,
-                    transition: { type: "spring", stiffness: 150, damping: 15 },
-                  }}
                   whileHover={{
                     rotateX: 5,
                     rotateY: 5,
@@ -650,7 +659,7 @@ const ServicesPage = () => {
                     <motion.div
                       className="font-bold text-xl text-black mb-3 tracking-tight overflow-hidden"
                       initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
+                      animate={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
                     >
                       {service.title.split("").map((char, idx) => (
@@ -658,7 +667,7 @@ const ServicesPage = () => {
                           key={idx}
                           className="inline-block group-hover:text-[#7895d0] transition-colors duration-300"
                           initial={{ y: 20, opacity: 0 }}
-                          whileInView={{ y: 0, opacity: 1 }}
+                          animate={{ y: 0, opacity: 1 }}
                           transition={{ delay: idx * 0.03, duration: 0.3 }}
                           whileHover={{ y: -2, transition: { duration: 0.2 } }}
                         >
@@ -671,7 +680,7 @@ const ServicesPage = () => {
                     <motion.div
                       className="text-[#333] text-base mb-6 leading-relaxed"
                       initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
                     >
                       {service.desc}
@@ -681,8 +690,7 @@ const ServicesPage = () => {
                     <motion.ul
                       className="text-left mx-auto text-black text-sm space-y-2 max-w-xs flex-grow"
                       initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true, amount: 0.2 }}
+                      animate="visible"
                       variants={{
                         hidden: {},
                         visible: {
@@ -755,6 +763,7 @@ const ServicesPage = () => {
           })}
         </div>
       </motion.section>
+
       {/* Custom CTA Section */}
       <CustomCTA />
     </div>
