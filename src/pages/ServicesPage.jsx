@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { motion, useInView, useMotionValue, animate } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   FaBoxOpen,
   FaCar,
@@ -14,22 +16,13 @@ import {
   FaGripLines,
   FaRoad,
 } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Grid, A11y } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
-import { useMotionValue, animate } from "framer-motion";
-import { Link } from "react-router-dom";
 import CustomTape from "../components/CustomTape";
+import ServiceHero from "../components/ServiceHero";
 
 export const services = [
   {
     slug: "bopp-packaging-tape",
-    icon: "FaBoxOpen",
+    icon: <FaBoxOpen />,
     title: "BOPP Packaging Tape",
     desc: "High-clarity, pilfer-proof tape ideal for sealing and shipping.",
     longDescription:
@@ -39,9 +32,6 @@ export const services = [
       "Transparent and printed options available",
       "Withstands wear and tear during transit",
       "Eco-friendly water-based adhesive",
-      "Strong sealing for medium to heavy cartons",
-      "Custom branding available",
-      "Compatible with tape dispensers",
     ],
     applications: [
       "Sealing shipping cartons",
@@ -75,7 +65,7 @@ export const services = [
   },
   {
     slug: "automotive-tapes",
-    icon: "FaCar",
+    icon: <FaCar />,
     title: "Automotive Tapes",
     desc: "Heat and vibration resistant for trims and wire harnessing.",
     longDescription:
@@ -84,10 +74,7 @@ export const services = [
       "Withstands high engine and cabin temperatures",
       "Reduces rattling, noise, and vibration",
       "Resistant to oils and solvents",
-      "Ideal for trims, interior panels, and dashboards",
       "Maintains adhesion under heat cycles",
-      "Flexible and easy to mold around corners",
-      "UV and weather resistant",
     ],
     applications: [
       "Wire harness wrapping",
@@ -98,7 +85,7 @@ export const services = [
   },
   {
     slug: "masking-tapes",
-    icon: "FaEraser",
+    icon: <FaEraser />,
     title: "Masking Tapes",
     desc: "Clean removal, high precision, and no residue.",
     longDescription:
@@ -109,7 +96,6 @@ export const services = [
       "Offers sharp paint lines and edge definition",
       "Works on various surfaces: walls, wood, metal",
       "Available in multiple widths and grades",
-      "Heat and solvent resistant variants available",
     ],
     applications: [
       "Painting and decorative tasks",
@@ -120,7 +106,7 @@ export const services = [
   },
   {
     slug: "custom-printing-tapes",
-    icon: "FaTags",
+    icon: <FaTags />,
     title: "Custom Printed Tapes",
     desc: "Brand your packaging and enhance visibility.",
     longDescription:
@@ -131,7 +117,6 @@ export const services = [
       "Used in logistics, eCommerce, and retail",
       "Durable adhesive holds during transit",
       "Can include QR codes or product info",
-      "Water-based and solvent-based adhesives available",
     ],
     applications: [
       "eCommerce shipping",
@@ -141,7 +126,7 @@ export const services = [
   },
   {
     slug: "logistics-carton-sealing",
-    icon: "FaTruck",
+    icon: <FaTruck />,
     title: "Logistics & Carton Sealing",
     desc: "Secure, reliable, and easy to use for all box types.",
     longDescription:
@@ -152,12 +137,11 @@ export const services = [
       "Works with automated packaging machines",
       "Available in multiple thicknesses",
       "Suitable for high-load shipping",
-      "Tamper-resistant closure",
     ],
   },
   {
     slug: "color-specialty-tapes",
-    icon: "FaPalette",
+    icon: <FaPalette />,
     title: "Color & Specialty Tapes",
     desc: "Highlight, code, or decorate with style.",
     longDescription:
@@ -168,12 +152,11 @@ export const services = [
       "Durable surface finish",
       "Writable surface for labels",
       "Available in matte, glossy, and reflective types",
-      "Can be removed without damage",
     ],
   },
   {
     slug: "wire-harnessing-tapes",
-    icon: "FaCogs",
+    icon: <FaCogs />,
     title: "Wire Harnessing Tapes",
     desc: "Insulate and protect wires in automotive and electronics.",
     longDescription:
@@ -184,28 +167,26 @@ export const services = [
       "Withstands heat and vibration",
       "Available in PVC, cloth, and felt materials",
       "Flame retardant and low VOC",
-      "Improves wire aesthetics and safety",
     ],
   },
-  {
-    slug: "white-goods-tapes",
-    icon: "FaBolt",
-    title: "White Goods Tapes",
-    desc: "Durable, moisture-resistant, and long-lasting adhesion.",
-    longDescription:
-      "White goods tapes are used during the manufacturing, packaging, and transportation of appliances such as refrigerators, washing machines, and air conditioners. These tapes provide secure adhesion to various surfaces without leaving residue, ensuring protection of fragile parts during movement.",
-    features: [
-      "Excellent moisture resistance",
-      "Long shelf life and storage durability",
-      "Peels cleanly without marks",
-      "Protects glass, metal, and plastic parts",
-      "Withstands cold and heat cycles",
-      "Used in appliance assembly and transport",
-    ],
-  },
+  // {
+  //   slug: "white-goods-tapes",
+  //   icon: <FaBolt />,
+  //   title: "White Goods Tapes",
+  //   desc: "Durable, moisture-resistant, and long-lasting adhesion.",
+  //   longDescription:
+  //     "White goods tapes are used during the manufacturing, packaging, and transportation of appliances such as refrigerators, washing machines, and air conditioners. These tapes provide secure adhesion to various surfaces without leaving residue, ensuring protection of fragile parts during movement.",
+  //   features: [
+  //     "Excellent moisture resistance",
+  //     "Long shelf life and storage durability",
+  //     "Peels cleanly without marks",
+  //     "Protects glass, metal, and plastic parts",
+  //     "Withstands cold and heat cycles",
+  //   ],
+  // },
   {
     slug: "surface-protection-tapes",
-    icon: "FaShieldAlt",
+    icon: <FaShieldAlt />,
     title: "Surface Protection Tapes",
     desc: "Protect surfaces from scratches and damage.",
     longDescription:
@@ -216,12 +197,11 @@ export const services = [
       "No adhesive residue after removal",
       "Ideal for painted and glossy surfaces",
       "Custom sizes available",
-      "Used in electronics, appliances, and furniture",
     ],
   },
   {
     slug: "pvc-insulation-tape",
-    icon: "FaPlug",
+    icon: <FaPlug />,
     title: "PVC Insulation Tape",
     desc: "Pressure-sensitive, flexible, and abrasion-resistant.",
     longDescription:
@@ -232,12 +212,11 @@ export const services = [
       "Flexible and stretchable for tight spaces",
       "Easy to tear and apply",
       "Available in multiple colors for coding",
-      "Conforms to uneven surfaces",
     ],
   },
   {
     slug: "painters-masking-tape",
-    icon: "FaPaintRoller",
+    icon: <FaPaintRoller />,
     title: "Painter’s Masking Tape",
     desc: "Clean lines and easy removal for painting.",
     longDescription:
@@ -252,7 +231,7 @@ export const services = [
   },
   {
     slug: "cross-filament-tape",
-    icon: "FaGripLines",
+    icon: <FaGripLines />,
     title: "Cross Filament Tape",
     desc: "Glass fiber-reinforced for heavy packing.",
     longDescription:
@@ -263,12 +242,11 @@ export const services = [
       "Water and abrasion resistant",
       "Ideal for bundling pipes, rods, and boxes",
       "Replaces metal strapping in many cases",
-      "Available in clear and black options",
     ],
   },
   {
     slug: "floor-marking-tape",
-    icon: "FaRoad",
+    icon: <FaRoad />,
     title: "Floor Marking Tape",
     desc: "Mark hazards, aisles, and directions in industrial spaces.",
     longDescription:
@@ -279,7 +257,6 @@ export const services = [
       "Durable under foot and forklift traffic",
       "Non-slippery surface finish",
       "Removable and replaceable without tools",
-      "Resistant to water, oil, and chemicals",
     ],
   },
 ];
@@ -290,54 +267,6 @@ const stats = [
   { value: 20, label: "Tape Variants" },
   { value: 15, label: "Industries Covered" },
 ];
-
-const tapeRollSVG = (
-  <div
-    className="absolute bottom-8 right-8 z-0 opacity-20 pointer-events-none select-none"
-    style={{ filter: "blur(1px)" }}
-  >
-    <svg
-      width="160"
-      height="120"
-      viewBox="0 0 160 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="50"
-        cy="60"
-        r="32"
-        fill="#acb6c7"
-        stroke="#6985bc"
-        strokeWidth="6"
-      />
-      <circle
-        cx="50"
-        cy="60"
-        r="16"
-        fill="#fff"
-        stroke="#6985bc"
-        strokeWidth="3"
-      />
-      <motion.rect
-        x="82"
-        y="56"
-        width="60"
-        height="8"
-        rx="4"
-        fill="#6985bc"
-        initial={{ x: 82 }}
-        animate={{ x: [82, 100, 82] }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "easeInOut",
-        }}
-      />
-    </svg>
-  </div>
-);
 
 const CustomCTA = () => (
   <motion.section
@@ -438,63 +367,14 @@ function AnimatedNumber({ value }) {
 }
 
 const ServicesPage = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className="bg-gradient-to-br from-[#7895d0] to-white min-h-screen">
       {/* Hero Section */}
-      <motion.section
-        className="relative w-full py-20 px-4 pt-40 flex flex-col items-center justify-center bg-[#6985bc] overflow-hidden"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="max-w-3xl mx-auto text-center z-10 relative">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
-            Premium Tape Solutions
-          </h1>
-          <p className="text-lg font-semibold md:text-xl text-black mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover our full range of{" "}
-            <span className="font-semibold text-white">general</span> and{" "}
-            <span className="font-semibold text-white">specialty tapes</span>,
-            engineered for <span className="font-semibold">reliability</span>,{" "}
-            <span className="font-semibold">performance</span>, and your unique
-            business needs. From{" "}
-            <span className="font-semibold text-white">packaging</span> to{" "}
-            <span className="font-semibold text-white">insulation</span>, we
-            have the perfect tape for you.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
-              🏆 Industry Leading Quality
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
-              🚚 Fast Delivery
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-sm text-base">
-              🛡️ Custom Solutions
-            </span>
-          </div>
-          <a
-            href="#services"
-            className="inline-block mt-2 px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg hover:bg-[#acb6c7] transition-colors duration-200"
-          >
-            Explore Our Tapes
-          </a>
-        </div>
-        {/* Decorative SVG blob */}
-        <svg
-          className="absolute left-0 top-0 w-60 h-60 opacity-20 blur-2xl -z-10"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill="#fffff"
-            d="M44.8,-67.2C57.2,-59.2,65.2,-44.8,70.2,-29.7C75.2,-14.7,77.2,1,72.2,14.7C67.2,28.3,55.2,39.8,42.2,48.2C29.2,56.7,14.6,62.1,-0.7,62.9C-16,63.7,-32,59.9,-44.2,51.1C-56.4,42.3,-64.8,28.5,-68.2,13.6C-71.6,-1.3,-70,-17.2,-62.7,-29.7C-55.4,-42.2,-42.4,-51.3,-28.2,-58.2C-14,-65.1,1.4,-69.8,16.7,-70.2C32,-70.6,44.8,-67.2,44.8,-67.2Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-        {tapeRollSVG}
-      </motion.section>
+      <ServiceHero />
+
       {/* Stats Section */}
       <motion.section
         className="max-w-5xl mx-auto py-12 px-4 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -508,6 +388,7 @@ const ServicesPage = () => {
         ))}
       </motion.section>
 
+      {/* Custom Tape */}
       <CustomTape />
 
       {/* Services Grid */}
@@ -531,8 +412,6 @@ const ServicesPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-            const [isHovered, setIsHovered] = useState(false);
 
             const handleMouseMove = (e) => {
               const rect = e.currentTarget.getBoundingClientRect();
@@ -554,7 +433,7 @@ const ServicesPage = () => {
               >
                 <motion.div
                   key={index}
-                  className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-[#7895d0] cursor-pointer text-center h-[450px] group overflow-hidden"
+                  className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-[#7895d0] cursor-pointer text-center h-[500px] group overflow-hidden"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{
                     opacity: 1,
@@ -649,6 +528,7 @@ const ServicesPage = () => {
                         <motion.div
                           whileHover={{ scale: 1.2 }}
                           transition={{ duration: 0.2 }}
+                          className="text-3xl"
                         >
                           {service.icon}
                         </motion.div>
