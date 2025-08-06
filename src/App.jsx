@@ -12,7 +12,7 @@ import CallToAction from "./components/CallToAction";
 import AboutOwner from "./components/AboutOwner";
 import ServicesPage from "./pages/ServicesPage";
 import ServiceDetail from "./pages/ServiceDetail";
-import AboutPage from "./pages/Aboutpage";
+import AboutPage from "./pages/AboutPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 
 function MainHome() {
