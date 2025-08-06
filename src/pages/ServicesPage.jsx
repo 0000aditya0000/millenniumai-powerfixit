@@ -345,7 +345,7 @@ function AnimatedStat({ value, label }) {
       >
         {inView ? <AnimatedNumber value={value} /> : 0}
       </motion.span>
-      <span className="text-lg text-black font-semibold">{label}</span>
+      <span className="text-lg text-black text-center font-semibold">{label}</span>
     </motion.div>
   );
 }
@@ -437,7 +437,7 @@ const ServicesPage = () => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{
                     opacity: 1,
-                    y: 0,
+                    // y: 0,
                     x: mousePosition.x,
                     y: mousePosition.y,
                   }}

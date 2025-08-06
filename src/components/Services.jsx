@@ -1,21 +1,15 @@
 import {
   FaBoxOpen,
-  FaTruck,
-  FaCheckCircle,
   FaPalette,
-  FaCar,
   FaEraser,
   FaTags,
   FaCogs,
-  FaBolt,
-  FaShieldAlt,
   FaPlug,
   FaPaintRoller,
   FaGripLines,
   FaRoad,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { title } from "motion/react-client";
 
 const generalTapes = [
   {
