@@ -18,11 +18,24 @@ import {
 } from "react-icons/fa";
 import CustomTape from "../components/CustomTape";
 import ServiceHero from "../components/ServiceHero";
+import img1 from '../assets/hero-photos/img5.png'
+import img2 from '../assets/hero-photos/img11.png'
+import img3 from '../assets/hero-photos/pic55.jpeg'
+import img4 from '../assets/hero-photos/pic1.jpeg'
+import img5 from '../assets/hero-photos/pic2.jpeg'
+import img6 from '../assets/hero-photos/pic3.jpeg'
+import img7 from '../assets/hero-photos/pic4.jpeg'
+import img8 from '../assets/tape-photos/img1.jpeg'
+import img9 from '../assets/tape-photos/img2.jpeg'
+import img10 from '../assets/tape-photos/img3.jpeg'
+import img11 from '../assets/tape-photos/img10.jpeg'
+import img12 from '../assets/tape-photos/img11.jpeg'
 
 export const services = [
   {
     slug: "bopp-packaging-tape",
     icon: <FaBoxOpen />,
+    img: img1,
     title: "BOPP Packaging Tape",
     desc: "High-clarity, pilfer-proof tape ideal for sealing and shipping.",
     longDescription:
@@ -66,6 +79,7 @@ export const services = [
   {
     slug: "automotive-tapes",
     icon: <FaCar />,
+    img: img2,
     title: "Automotive Tapes",
     desc: "Heat and vibration resistant for trims and wire harnessing.",
     longDescription:
@@ -86,6 +100,7 @@ export const services = [
   {
     slug: "masking-tapes",
     icon: <FaEraser />,
+    img: img3,
     title: "Masking Tapes",
     desc: "Clean removal, high precision, and no residue.",
     longDescription:
@@ -107,6 +122,7 @@ export const services = [
   {
     slug: "custom-printing-tapes",
     icon: <FaTags />,
+    img: img4,
     title: "Custom Printed Tapes",
     desc: "Brand your packaging and enhance visibility.",
     longDescription:
@@ -127,6 +143,7 @@ export const services = [
   {
     slug: "logistics-carton-sealing",
     icon: <FaTruck />,
+    img: img5,
     title: "Logistics & Carton Sealing",
     desc: "Secure, reliable, and easy to use for all box types.",
     longDescription:
@@ -142,6 +159,7 @@ export const services = [
   {
     slug: "color-specialty-tapes",
     icon: <FaPalette />,
+    img: img6,
     title: "Color & Specialty Tapes",
     desc: "Highlight, code, or decorate with style.",
     longDescription:
@@ -157,6 +175,7 @@ export const services = [
   {
     slug: "wire-harnessing-tapes",
     icon: <FaCogs />,
+    img: img7,
     title: "Wire Harnessing Tapes",
     desc: "Insulate and protect wires in automotive and electronics.",
     longDescription:
@@ -187,6 +206,7 @@ export const services = [
   {
     slug: "surface-protection-tapes",
     icon: <FaShieldAlt />,
+    img: img8,
     title: "Surface Protection Tapes",
     desc: "Protect surfaces from scratches and damage.",
     longDescription:
@@ -202,6 +222,7 @@ export const services = [
   {
     slug: "pvc-insulation-tape",
     icon: <FaPlug />,
+    img: img9,
     title: "PVC Insulation Tape",
     desc: "Pressure-sensitive, flexible, and abrasion-resistant.",
     longDescription:
@@ -217,6 +238,7 @@ export const services = [
   {
     slug: "painters-masking-tape",
     icon: <FaPaintRoller />,
+    img: img10,
     title: "Painter’s Masking Tape",
     desc: "Clean lines and easy removal for painting.",
     longDescription:
@@ -232,6 +254,7 @@ export const services = [
   {
     slug: "cross-filament-tape",
     icon: <FaGripLines />,
+    img: img11,
     title: "Cross Filament Tape",
     desc: "Glass fiber-reinforced for heavy packing.",
     longDescription:
@@ -247,6 +270,7 @@ export const services = [
   {
     slug: "floor-marking-tape",
     icon: <FaRoad />,
+    img: img12,
     title: "Floor Marking Tape",
     desc: "Mark hazards, aisles, and directions in industrial spaces.",
     longDescription:
@@ -433,7 +457,7 @@ const ServicesPage = () => {
               >
                 <motion.div
                   key={index}
-                  className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-[#7895d0] cursor-pointer text-center h-[500px] group overflow-hidden"
+                  className="relative flex flex-col items-center bg-white rounded-2xl p-8 shadow-lg border border-[#7895d0] cursor-pointer text-center min-h-[500px] overflow-hidden"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{
                     opacity: 1,

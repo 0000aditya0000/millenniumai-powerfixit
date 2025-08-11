@@ -81,9 +81,9 @@ const ServiceDetail = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src={service.image || "/placeholder-image.jpg"}
+                  src={service.img || "/placeholder-image.jpg"}
                   alt={service.title}
-                  className="rounded-2xl shadow-xl object-cover w-full h-96 group-hover:shadow-2xl transition-shadow duration-300"
+                  className="rounded-2xl shadow-xl object-fill w-full h-96 group-hover:shadow-2xl transition-shadow duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-2xl group-hover:bg-black/20 transition-colors duration-300"></div>
               </motion.div>
