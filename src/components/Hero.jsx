@@ -4,9 +4,9 @@ import { RiShakeHandsFill } from "react-icons/ri";
 import img1 from "../assets/hero-photos/pic4.jpeg";
 import img2 from "../assets/hero-photos/pic3.jpeg";
 import img3 from "../assets/hero-photos/pic1.jpeg";
-import img4 from "../assets/hero-photos/picx8.png";
-// import img5 from "../assets/hero-photos/img55.png";
-import img6 from "../assets/hero-photos/pic2.jpeg";
+import img4 from "../assets/hero-photos/pic2.jpeg";
+// import img5 from "../assets/hero-photos/wire.png";
+// import img6 from "../assets/hero-photos/img55.png";
 
 const carouselImages = [
   {
@@ -18,7 +18,7 @@ const carouselImages = [
   {
     src: img2,
     alt: "Double Side Tape",
-    title: "Cross Filament Tape",
+    title: "Transparent Tape",
     description: "Perfect bonding for crafts, frames, and industry.",
   },
   {
@@ -29,22 +29,22 @@ const carouselImages = [
   },
   {
     src: img4,
-    alt: "Insulation Tape",
-    title: "Electrical Insulation Tape",
-    description: "Safe, flexible insulation for wires and electricals.",
-  },
-  // {
-  //   src: img5,
-  //   alt: "BOPP Tape",
-  //   // title: "BOPP Adhesive Tape",
-  //   // description: "Durable, moisture-resistant sealing for packages.",
-  // },
-  {
-    src: img6,
     alt: "Colourful Tapes",
     title: "Custom Colourful Tapes",
     description: "Promote your brand with printed tapes.",
   },
+  // {
+  //   src: img5,
+  //   alt: "Insulation Tape",
+  //   title: "Electrical Insulation Tape",
+  //   description: "Safe, flexible insulation for wires and electricals.",
+  // },
+  // {
+  //   src: img6,
+  //   alt: "BOPP Tape",
+  //   // title: "BOPP Adhesive Tape",
+  //   // description: "Durable, moisture-resistant sealing for packages.",
+  // },
 ];
 
 export default function Hero() {
@@ -136,7 +136,7 @@ export default function Hero() {
           }`}
         >
           <h1
-            className="lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[53px] font-bold leading-tight text-white mb-4 imperial-script-regular"
+            className="text-white lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[53px] font-bold leading-tight mb-4 imperial-script-regular"
           >
             Jod Hamra{" "}
             <span className="text-blue-950 inline-block">
@@ -176,7 +176,7 @@ export default function Hero() {
                     <span className="relative z-10">Get a Quote</span>
                   </button>
                 </a>
-                <a href="#services">
+                <a href="/services">
                   <button className="group relative px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:scale-105 transition-all duration-300 border border-[#7895d0] bg-white text-[#7895d0]">
                     <span className="relative z-10">View Products</span>
                   </button>
