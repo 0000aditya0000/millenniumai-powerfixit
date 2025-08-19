@@ -9,33 +9,33 @@ import tapeimg6 from '../assets/tape-photos/img4.jpeg'
 const tapeDetails = [
   {
     img: tapeimg1,
-    title: "Crystal Clear Tape",
-    desc: "Ultra-transparent finish, ideal for premium packaging and sealing.",
+    // title: "Crystal Clear Tape",
+    // desc: "Ultra-transparent finish, ideal for premium packaging and sealing.",
   },
   {
     img: tapeimg2,
-    title: "High-Tack Brown Tape",
-    desc: "Strong adhesive for heavy cartons. Works in humid conditions.",
+    // title: "High-Tack Brown Tape",
+    // desc: "Strong adhesive for heavy cartons. Works in humid conditions.",
   },
   {
     img: tapeimg3,
-    title: "Custom Printed Tape",
-    desc: "Printed with your branding/logo. Boosts brand visibility.",
+    // title: "Custom Printed Tape",
+    // desc: "Printed with your branding/logo. Boosts brand visibility.",
   },
   {
     img: tapeimg4,
-    title: "Masking Tape",
-    desc: "Removes cleanly after use. Perfect for painting and surface protection.",
+    // title: "Masking Tape",
+    // desc: "Removes cleanly after use. Perfect for painting and surface protection.",
   },
   {
     img: tapeimg5,
-    title: "Packaging Tape",
-    desc: "Packaging tapes are widely used for carton sealing and shipping applications.",
+    // title: "Packaging Tape",
+    // desc: "Packaging tapes are widely used for carton sealing and shipping applications.",
   },
   {
     img: tapeimg6,
-    title: "Coloured Tape",
-    desc: "Vibrant colors for coding, marking, or decorative packaging.",
+    // title: "Coloured Tape",
+    // desc: "Vibrant colors for coding, marking, or decorative packaging.",
   },
 ];
 
@@ -79,7 +79,7 @@ function TapeGrid() {
               <motion.img
                 src={tape.img}
                 alt={tape.title}
-                className="w-full h-48 object-fill rounded-xl shadow-lg border-4 border-[#eaeff7] mb-4"
+                className="w-full h-50 object-fill rounded-xl shadow-lg border-4 border-[#eaeff7]"
                 whileHover={{ scale: 1.03, rotate: 1 }}
                 transition={{ duration: 0.28 }}
                 draggable={false}

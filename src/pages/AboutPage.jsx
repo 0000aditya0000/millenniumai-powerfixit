@@ -22,20 +22,20 @@ function AboutPage() {
         </svg>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 flex justify-center">
-            <div className="bg-white rounded-2xl p-4 md:p-8 border-4 border-[#7895d0] shadow-xl">
+            <div className="bg-gray-200 rounded-2xl p-4 border-4 border-[#7895d0] shadow-xl">
               <img
                 src={aboutimg}
-                alt="Tape Rolls"
+                alt="power fixit"
                 className="rounded-xl shadow-lg w-80 h-80 object-fill"
               />
             </div>
           </div>
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-4xl font-bold mb-6 text-[#7895d0]">
-              About PowerFixit Tapes
+              About Power Fixit Tapes
             </h2>
             <p className="text-lg mb-6 text-black">
-              Since 2009, PowerFixit has been a trusted name in BOPP
+              Since 2009, Power Fixit has been a trusted name in BOPP
               self-adhesive tapes. Our mission is to deliver strong, reliable,
               and customizable tape solutions for packaging, shipping, and
               industrial needs. We are ISO 9001:2015 certified, ensuring every

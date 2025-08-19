@@ -10,7 +10,7 @@ const testimonials = [
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    quote: "Custom printed tapes from PowerFixit made our brand stand out. Fast delivery too!",
+    quote: "Custom printed tapes from Power Fixit made our brand stand out. Fast delivery too!",
     name: "Priya Mehta",
     company: "Mehta Retailers",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg"

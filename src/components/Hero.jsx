@@ -1,31 +1,31 @@
 import { useRef, useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { RiShakeHandsFill } from "react-icons/ri";
-import img1 from "../assets/hero-photos/pic55.jpeg";
+import img1 from "../assets/hero-photos/pic4.jpeg";
 import img2 from "../assets/hero-photos/pic3.jpeg";
 import img3 from "../assets/hero-photos/pic1.jpeg";
-import img4 from "../assets/hero-photos/pic4.jpeg";
-import img5 from "../assets/hero-photos/img55.png";
+import img4 from "../assets/hero-photos/picx8.png";
+// import img5 from "../assets/hero-photos/img55.png";
 import img6 from "../assets/hero-photos/pic2.jpeg";
 
 const carouselImages = [
   {
     src: img1,
     alt: "Packaging Tape Roll",
-    title: "Premium Packaging Tape",
+    title: "Self Adhesive Packing Tape",
     description: "Strong adhesion for secure packaging & shipping.",
   },
   {
     src: img2,
     alt: "Double Side Tape",
-    title: "Double Sided Tape",
+    title: "Cross Filament Tape",
     description: "Perfect bonding for crafts, frames, and industry.",
   },
   {
     src: img3,
-    alt: "Masking Tape",
-    title: "High-Quality Masking Tape",
-    description: "Clean lines, easy removal for painting & repairs.",
+    alt: "Masking",
+    title: "Colorful Adhesive Packing Tape",
+    description: "Durable, moisture-resistant sealing for packages.",
   },
   {
     src: img4,
@@ -33,17 +33,17 @@ const carouselImages = [
     title: "Electrical Insulation Tape",
     description: "Safe, flexible insulation for wires and electricals.",
   },
-  {
-    src: img5,
-    alt: "BOPP Tape",
-    title: "BOPP Adhesive Tape",
-    description: "Durable, moisture-resistant sealing for packages.",
-  },
+  // {
+  //   src: img5,
+  //   alt: "BOPP Tape",
+  //   // title: "BOPP Adhesive Tape",
+  //   // description: "Durable, moisture-resistant sealing for packages.",
+  // },
   {
     src: img6,
-    alt: "Custom Printed Tape",
-    title: "Custom Printed Tape",
-    description: "Promote your brand with printed adhesive tapes.",
+    alt: "Colourful Tapes",
+    title: "Custom Colourful Tapes",
+    description: "Promote your brand with printed tapes.",
   },
 ];
 
@@ -136,7 +136,7 @@ export default function Hero() {
           }`}
         >
           <h1
-            className="lg:absolute xl:top-10 xl:-left-10 text-3xl md:text-5xl lg:text-4xl xl:text-[45px] font-extrabold leading-tight text-white mb-4 libertinus-serif-bold"
+            className="lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[55px] font-bold leading-tight text-white mb-4 imperial-script-regular"
           >
             Jod Hamra{" "}
             <span className="text-blue-950 inline-block">
@@ -193,7 +193,7 @@ export default function Hero() {
                     style={{
                       background: `linear-gradient(135deg, #96b0e0 40%, #acb6c7 70%, #ffffff 100%)`,
                       transform: `rotate(${
-                        (currentImageIndex - 2) * -3
+                        (currentImageIndex - 2) * 2
                       }deg) scale(${1 + (currentImageIndex % 2) * 0.08})`,
                       transition: "all 1s",
                     }}
@@ -205,8 +205,8 @@ export default function Hero() {
                     style={{
                       background: `linear-gradient(150deg, #96b0e0 40%, #acb6c7 70%, #ffffff 100%)`,
                       transform: `rotate(${
-                        (currentImageIndex - 2) * 3
-                      }deg) scale(${1 + (currentImageIndex % 2) * 0.1})`,
+                        (currentImageIndex - 2) * 5
+                      }deg) scale(${1 + (currentImageIndex % 2) * 0.08})`,
                       transition: "all 1s",
                     }}
                   />
@@ -217,8 +217,8 @@ export default function Hero() {
                     style={{
                       background: `linear-gradient(150deg, #96b0e0 40%, #acb6c7 70%, #ffffff 100%)`,
                       transform: `rotate(${
-                        (currentImageIndex - 2) * 5
-                      }deg) scale(${1 + (currentImageIndex % 2) * 0.07})`,
+                        (currentImageIndex - 2) * 9
+                      }deg) scale(${1 + (currentImageIndex % 2) * 0.08})`,
                       transition: "all 1s",
                     }}
                   />
