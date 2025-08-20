@@ -22,8 +22,7 @@ import img5 from '../assets/hero-photos/colour.png'
 import img6 from '../assets/hero-photos/white.png'
 import img7 from '../assets/hero-photos/wire.png'
 import img8 from '../assets/hero-photos/cross.png'
-import img9 from '../assets/hero-photos/floor.png'
-
+import img9 from '../assets/hero-photos/flor.png'
 export const services = [
   {
     slug: "bopp-packaging-tape",
