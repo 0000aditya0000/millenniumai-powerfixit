@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import "tailwindcss";
 
 ::selection {
@@ -72,4 +73,11 @@
   font-family: "Pacifico", cursive;
   font-weight: 500;
   font-style: italic;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }

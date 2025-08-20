@@ -136,9 +136,9 @@ export default function Hero() {
           }`}
         >
           <h1
-            className="text-white lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[53px] font-bold leading-tight imperial-script-regular"
+            className="text-white lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[48px] font-extrabold leading-tight dancing-script"
           >
-            Jod Hamra{" "}
+            Jod Hamara{" "}
             <span className="text-blue-950 inline-block">
               <RiShakeHandsFill />
             </span>{" "}
@@ -256,7 +256,7 @@ export default function Hero() {
                           <h3 className="text-2xl font-bold mb-1 text-white">
                             {carouselImages[currentImageIndex].title}
                           </h3>
-                          <p className="text-lg text-gray-100">
+                          <p className="text-lg text-gray-200">
                             {carouselImages[currentImageIndex].description}
                           </p>
                         </div>
