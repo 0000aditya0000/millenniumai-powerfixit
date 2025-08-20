@@ -17,7 +17,7 @@ import ServiceHero from "../components/ServiceHero";
 import img1 from '../assets/hero-photos/bopp.png'
 import img2 from '../assets/hero-photos/masking.png'
 import img3 from '../assets/hero-photos/custom.png'
-import img4 from '../assets/hero-photos/packaging.png'
+import img4 from '../assets/hero-photos/packing.png'
 import img5 from '../assets/hero-photos/colour.png'
 import img6 from '../assets/hero-photos/white.png'
 import img7 from '../assets/hero-photos/wire.png'
