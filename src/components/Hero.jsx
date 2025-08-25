@@ -5,8 +5,8 @@ import img1 from "../assets/hero-photos/pic4.jpeg";
 import img2 from "../assets/hero-photos/pic3.jpeg";
 import img3 from "../assets/hero-photos/pic1.jpeg";
 import img4 from "../assets/hero-photos/pic2.jpeg";
-// import img5 from "../assets/hero-photos/wire.png";
-// import img6 from "../assets/hero-photos/img55.png";
+import img5 from "../assets/hero-photos/pic6.jpg";
+import img6 from "../assets/hero-photos/pic7.jpg";
 
 const carouselImages = [
   {
@@ -33,18 +33,18 @@ const carouselImages = [
     title: "Custom Colourful Tapes",
     description: "Promote your brand with printed tapes.",
   },
-  // {
-  //   src: img5,
-  //   alt: "Insulation Tape",
-  //   title: "Electrical Insulation Tape",
-  //   description: "Safe, flexible insulation for wires and electricals.",
-  // },
-  // {
-  //   src: img6,
-  //   alt: "BOPP Tape",
-  //   // title: "BOPP Adhesive Tape",
-  //   // description: "Durable, moisture-resistant sealing for packages.",
-  // },
+  {
+    src: img5,
+    alt: "BOPP COATING MACHINE",
+    title: "BOPP Coating Machine",
+    description: "Safe, flexible sealing for packages.",
+  },
+  {
+    src: img6,
+    alt: "BOPP SLITTING MACHINE",
+    title: "BOPP Slitting Machine",
+    description: "Strong adhesion for secure packaging & shipping.",
+  },
 ];
 
 export default function Hero() {
@@ -227,7 +227,7 @@ export default function Hero() {
                 <div className="relative bg-white/80 rounded-3xl p-8 border-4 border-[#6985bc] shadow-2xl h-full flex flex-col justify-between">
                   {/* Company Name Top Border */}
                   <div className="absolute top-0 px-2 text-[#6985bc] font-bold tracking-wide text-xl pointer-events-none">
-                    Power-Fixit Tape Industries
+                    Power Fixit Tape Industries
                   </div>
                   {/* Carousel Image & Content */}
                   <div

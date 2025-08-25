@@ -9,7 +9,7 @@ export default function Footer() {
         <a href="#" className="hover:text-red-500" aria-label="Twitter"><FaTwitter /></a>
         <a href="#" className="hover:text-red-500" aria-label="Instagram"><FaInstagram /></a>
       </div>
-      <p>&copy; {new Date().getFullYear()} Power-Fixit Tapes. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Power Fixit Tapes. All rights reserved.</p>
     </footer>
   );
 }

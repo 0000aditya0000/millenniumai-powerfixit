@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { FaTape } from "react-icons/fa";
-import logo from "../assets/logo111.png";
+import logo from "../assets/pfx2.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -67,7 +66,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo left */}
         <div className="flex items-center gap-2">
-          <img src={logo} alt="Power Fixit" className="w-40 h-11 object-fill rounded-xl" />
+          <img src={logo} alt="Power Fixit" className="w-45 h-13 object-fill rounded-xl" />
           {/* <span className="font-extrabold text-3xl text-black tracking-wide">Power <span className="text-red-700">Fi<span className="text-black">x</span>it</span></span> */}
         </div>
         {/* Nav links center */}

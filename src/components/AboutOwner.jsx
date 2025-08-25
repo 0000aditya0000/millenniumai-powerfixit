@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import owner from "../assets/owner.jpeg";
 import owner2 from "../assets/owner2.jpeg";

@@ -22,11 +22,11 @@ function AboutPage() {
         </svg>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 flex justify-center">
-            <div className="bg-gray-200 rounded-2xl p-4 border-4 border-[#7895d0] shadow-xl">
+            <div className="bg-black rounded-2xl border-4 border-[#7895d0] shadow-xl">
               <img
                 src={aboutimg}
                 alt="power fixit"
-                className="rounded-xl shadow-lg w-80 h-80 object-fill"
+                className="rounded-xl shadow-lg w-80 h-70 object-fill"
               />
             </div>
           </div>
