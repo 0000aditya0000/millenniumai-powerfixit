@@ -1,5 +1,5 @@
 import { FaCheckCircle } from "react-icons/fa";
-import aboutimg from '../assets/logo1.png'
+import aboutimg from '../assets/pfx1.png'
 import ServiceHero from "../components/ServiceHero";
 
 function AboutPage() {
@@ -22,16 +22,16 @@ function AboutPage() {
         </svg>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 flex justify-center">
-            <div className="bg-black rounded-2xl border-4 border-[#7895d0] shadow-xl">
+            <div className="">
               <img
                 src={aboutimg}
                 alt="power fixit"
-                className="rounded-xl shadow-lg w-80 h-70 object-fill"
+                className="rounded-xl h-70 object-contain"
               />
             </div>
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-bold mb-6 text-[#7895d0]">
+            <h2 className="text-4xl font-bold mb-6 text-[#7895d0] italic">
               About Power Fixit Tapes
             </h2>
             <p className="text-lg mb-6 text-black">

@@ -74,7 +74,7 @@ function TapeGrid() {
               initial="hidden"
               animate="visible"
               whileHover="hover"
-              className="relative bg-white rounded-2xl shadow-md flex flex-col items-center p-5 cursor-pointer transition-all duration-150 border-2 border-[#96b0e0]"
+              className="relative bg-white rounded-2xl shadow-md flex flex-col items-center p-3 cursor-pointer transition-all duration-150 border-2 border-[#96b0e0]"
             >
               <motion.img
                 src={tape.img}

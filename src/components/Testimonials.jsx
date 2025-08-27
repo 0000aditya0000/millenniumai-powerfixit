@@ -1,25 +1,42 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import img1 from '../assets/customre1.jpeg'
+import img2 from '../assets/customre2.jpeg'
+import img3 from '../assets/customre3.jpeg'
+import img4 from '../assets/customre4.jpeg'
+import img5 from '../assets/customre5.jpeg'
 
 const testimonials = [
   {
     quote: "The best tape we've ever used for our packaging! Super strong and always reliable.",
-    name: "Rohit Sharma",
-    company: "Sharma Logistics",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    name: "Mukesh Goel",
+    // company: "Sharma Logistics",
+    avatar: img1
   },
   {
     quote: "Custom printed tapes from Power Fixit made our brand stand out. Fast delivery too!",
-    name: "Priya Mehta",
-    company: "Mehta Retailers",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+    name: "Anshul",
+    // company: "Mehta Retailers",
+    avatar: img2
   },
   {
     quote: "Excellent quality and customer service. Highly recommended for any business.",
-    name: "Amit Verma",
-    company: "Verma Exports",
-    avatar: "https://randomuser.me/api/portraits/men/65.jpg"
+    name: "Tushar",
+    // company: "Verma Exports",
+    avatar: img3
+  },
+  {
+    quote: "Their eco-friendly tape options helped us reduce our carbon footprint significantly.",
+    name: "Baseswar Dayal",
+    // company: "Kapoor Enterprises",
+    avatar: img4    
+  },
+  { 
+    quote: "Power Fixit tapes are a game-changer for our shipping department. Strong hold every time!",
+    name: "Sunil Mishra", 
+    // company: "Singh Distributors",
+    avatar: img5    
   }
 ];
 
@@ -61,10 +78,10 @@ export default function Testimonials() {
                 className="bg-[#7895d0] p-8 rounded-2xl shadow-xl border-4 border-black flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 w-full"
                 aria-live="polite"
               >
-                <img src={testimonials[index].avatar} alt={testimonials[index].name} className="w-20 h-20 rounded-full border-2 border-[#b07a3c] mb-4 md:mb-0 shadow object-cover" />
+                <img src={testimonials[index].avatar} alt={testimonials[index].name} className="w-20 h-20 rounded-full border-2 border-gray-600 mb-4 md:mb-0 shadow object-cover" />
                 <div className="flex-1 text-left">
                   <p className="text-black italic mb-4 text-base md:text-lg">“{testimonials[index].quote}”</p>
-                  <div className="font-semibold text-white">{testimonials[index].name}</div>
+                  <div className="font-bold text-white">{testimonials[index].name}</div>
                   <div className="text-[#1a2341] text-sm">{testimonials[index].company}</div>
                 </div>
               </motion.div>
