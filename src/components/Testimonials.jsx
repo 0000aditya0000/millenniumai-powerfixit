@@ -10,32 +10,32 @@ import img5 from '../assets/customre5.jpeg'
 const testimonials = [
   {
     quote: "The best tape we've ever used for our packaging! Super strong and always reliable.",
-    name: "Mukesh Goel",
+    name: "Mr. Mukesh Goel Ji",
     // company: "Sharma Logistics",
     avatar: img1
   },
   {
     quote: "Custom printed tapes from Power Fixit made our brand stand out. Fast delivery too!",
-    name: "Anshul",
+    name: "Mr. Anshul Ji",
     // company: "Mehta Retailers",
     avatar: img2
   },
   {
     quote: "Excellent quality and customer service. Highly recommended for any business.",
-    name: "Tushar",
+    name: "Mr. Tushar Ji",
     // company: "Verma Exports",
     avatar: img3
   },
   {
     quote: "Their eco-friendly tape options helped us reduce our carbon footprint significantly.",
-    name: "Baseswar Dayal",
-    // company: "Kapoor Enterprises",
+    name: "Mr. Sunil Mishra Ji", 
+    // company: "Singh Distributors",
     avatar: img4    
   },
   { 
     quote: "Power Fixit tapes are a game-changer for our shipping department. Strong hold every time!",
-    name: "Sunil Mishra", 
-    // company: "Singh Distributors",
+    name: "Mr. Baseswar Dayal Ji",
+    // company: "Kapoor Enterprises",
     avatar: img5    
   }
 ];
