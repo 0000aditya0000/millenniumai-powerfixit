@@ -5,6 +5,10 @@ import tapeimg3 from '../assets/tape-photos/img3.jpeg'
 import tapeimg4 from '../assets/tape-photos/img11.jpeg'
 import tapeimg5 from '../assets/tape-photos/img10.jpeg'
 import tapeimg6 from '../assets/tape-photos/img4.jpeg'
+import tapeimg7 from '../assets/tape-photos/img5.jpeg'
+import tapeimg8 from '../assets/tape-photos/img8.jpg'
+import tapeimg9 from '../assets/tape-photos/img7.jpeg'
+
 
 const tapeDetails = [
   {
@@ -34,6 +38,21 @@ const tapeDetails = [
   },
   {
     img: tapeimg6,
+    // title: "Coloured Tape",
+    // desc: "Vibrant colors for coding, marking, or decorative packaging.",
+  },
+  {
+    img: tapeimg7,
+    // title: "Coloured Tape",
+    // desc: "Vibrant colors for coding, marking, or decorative packaging.",
+  },
+  {
+    img: tapeimg8,
+    // title: "Coloured Tape",
+    // desc: "Vibrant colors for coding, marking, or decorative packaging.",
+  },
+  {
+    img: tapeimg9,
     // title: "Coloured Tape",
     // desc: "Vibrant colors for coding, marking, or decorative packaging.",
   },

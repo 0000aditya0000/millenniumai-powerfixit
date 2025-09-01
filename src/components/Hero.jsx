@@ -35,14 +35,14 @@ const carouselImages = [
   },
   {
     src: img5,
-    alt: "BOPP COATING MACHINE",
-    title: "BOPP Coating Machine",
+    alt: "BOPP SLITTING MACHINE",
+    title: "BOPP Slitting Machine",
     description: "Safe, flexible sealing for packages.",
   },
   {
     src: img6,
-    alt: "BOPP SLITTING MACHINE",
-    title: "BOPP Slitting Machine",
+    alt: "BOPP COATING MACHINE",
+    title: "BOPP Coating Machine",
     description: "Strong adhesion for secure packaging & shipping.",
   },
 ];
@@ -136,13 +136,13 @@ export default function Hero() {
           }`}
         >
           <h1
-            className="text-white lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[48px] font-extrabold leading-tight dancing-script"
+            className="text-white lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[40px] font-extrabold leading-tight dancing-script"
           >
-            Jod Hamara{" "}
+            JOD HAMARA{" "}
             <span className="text-blue-950 inline-block">
-              <RiShakeHandsFill />
+              <RiShakeHandsFill className="relative top-[5px]"/>
             </span>{" "}
-            Bharosa Aapka
+            BHAROSA AAPKA
           </h1>
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Left: Main Content */}
