@@ -1,108 +1,290 @@
-import { useRef } from "react";
-import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade, EffectCoverflow } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-import 'swiper/css/effect-coverflow';
+import { useRef, useState, useEffect } from "react";
+import { Typewriter } from "react-simple-typewriter";
+import { RiShakeHandsFill } from "react-icons/ri";
+import img1 from "../assets/hero-photos/pic4.jpeg";
+import img2 from "../assets/hero-photos/pic3.jpeg";
+import img3 from "../assets/hero-photos/pic1.jpeg";
+import img4 from "../assets/hero-photos/pic2.jpeg";
+import img5 from "../assets/hero-photos/pic6.jpg";
+import img6 from "../assets/hero-photos/pic7.jpg";
 
-
-import heroimg1 from "../assets/tape2.png";
-import heroimg2 from "../assets/tape2.png";
-import heroimg3 from "../assets/tape3.png";
-
-const slides = [
+const carouselImages = [
   {
-    img: heroimg1,
-    headline: "Premium Adhesive Tapes Designed to Perform",
-    sub: "Delivering reliable, industrial-grade tapes for packaging, insulation, and custom solutions.",
+    src: img1,
+    alt: "Packaging Tape Roll",
+    title: "Self Adhesive Packing Tape",
+    description: "Strong adhesion for secure packaging & shipping.",
   },
   {
-    img: "https://www.segliwa.de/fileadmin/_processed_/e/8/csm_202111_SEG_HP_4x3_Glimmerba__nder_558af620f7.png",
-    headline: "Reliable Solutions for Every Industry",
-    sub: "From packaging to insulation, our tapes meet the highest standards.",
+    src: img2,
+    alt: "Double Side Tape",
+    title: "Transparent Tape",
+    description: "Perfect bonding for crafts, frames, and industry.",
   },
   {
-    img: heroimg3,
-    headline: "Custom Tape Solutions for Your Business",
-    sub: "Get tailored adhesive products to fit your unique requirements.",
+    src: img3,
+    alt: "Masking",
+    title: "Colorful Adhesive Packing Tape",
+    description: "Durable, moisture-resistant sealing for packages.",
+  },
+  {
+    src: img4,
+    alt: "Colourful Tapes",
+    title: "Custom Colourful Tapes",
+    description: "Promote your brand with printed tapes.",
+  },
+  {
+    src: img5,
+    alt: "BOPP SLITTING MACHINE",
+    title: "BOPP Slitting Machine",
+    description: "Safe, flexible sealing for packages.",
+  },
+  {
+    src: img6,
+    alt: "BOPP COATING MACHINE",
+    title: "BOPP Coating Machine",
+    description: "Strong adhesion for secure packaging & shipping.",
   },
 ];
 
 export default function Hero() {
-  const swiperRef = useRef(null);
+  const [animate, setAnimate] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStartX, setDragStartX] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const carouselRef = useRef(null);
+
+  // Drag handlers
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setDragStartX(e.clientX);
+    setDragOffset(0);
+  };
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    setDragOffset(e.clientX - dragStartX);
+  };
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    if (Math.abs(dragOffset) > 50) {
+      if (dragOffset > 0) {
+        setCurrentImageIndex((prev) =>
+          prev === 0 ? carouselImages.length - 1 : prev - 1
+        );
+      } else {
+        setCurrentImageIndex((prev) =>
+          prev === carouselImages.length - 1 ? 0 : prev + 1
+        );
+      }
+    }
+    setDragOffset(0);
+  };
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setDragStartX(e.touches[0].clientX);
+    setDragOffset(0);
+  };
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    setDragOffset(e.touches[0].clientX - dragStartX);
+  };
+  const handleTouchEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    if (Math.abs(dragOffset) > 50) {
+      if (dragOffset > 0) {
+        setCurrentImageIndex((prev) =>
+          prev === 0 ? carouselImages.length - 1 : prev - 1
+        );
+      } else {
+        setCurrentImageIndex((prev) =>
+          prev === carouselImages.length - 1 ? 0 : prev + 1
+        );
+      }
+    }
+    setDragOffset(0);
+  };
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isDragging) {
+        setCurrentImageIndex((prev) =>
+          prev === carouselImages.length - 1 ? 0 : prev + 1
+        );
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isDragging]);
+
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100);
+  }, []);
 
   return (
-    <section className="relative w-full min-h-[100vh] flex items-center justify-center px-0 overflow-hidden">
-      {/* Swiper Background */}
-      <div className="absolute top-0 inset-0 w-full h-screen z-0 cursor-pointer">
-        <Swiper
-          modules={[Autoplay, Pagination, EffectCoverflow]}
-          effect="coverflow"
-          loop
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          className="w-full h-full"
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-32 bg-[#6985bc]">
+      {/* Glowing Orbs */}
+      <div className="absolute top-1/4 -left-10 sm:-left-20 w-48 h-48 sm:w-72 sm:h-72 bg-[#acb6c7] rounded-full filter blur-[80px] animate-pulse" />
+      <div className="absolute bottom-1/4 -right-10 sm:-right-20 w-48 h-48 sm:w-72 sm:h-72 bg-[#a2b4d2] rounded-full filter blur-[110px] animate-pulse delay-1000" />
+
+      <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 relative z-20">
+        <div
+          className={`max-w-6xl mx-auto transition-all duration-1000 ${
+            animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         >
-          {slides.map((slide, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="relative w-full h-full min-h-[70vh]">
-                <div
-                  className="absolute inset-0 w-full h-full"
-                  style={{
-                    background: `url(${slide.img}) no-repeat center center/cover`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                  }}
-                />
-                {/* Overlay for better text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1a2341]/80 via-[#1a2341]/30 to-transparent z-10 pointer-events-none top-0" />
-                {/* Text Content */}
-                <div className="relative z-20 flex flex-col items-center justify-center h-full min-h-[70vh] px-4">
-                  <motion.h1
-                    className="text-3xl md:text-5xl font-semibold font-roboto-slab mb-4 text-white text-center drop-shadow-lg"
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.7 }}
+          <h1
+            className="text-white lg:absolute xl:top-10 xl:-left-10 text-4xl md:text-6xl lg:text-4xl xl:text-[40px] font-extrabold leading-tight dancing-script"
+          >
+            JOD HAMARA{" "}
+            <span className="text-blue-950 inline-block">
+              <RiShakeHandsFill className="relative top-[5px]"/>
+            </span>{" "}
+            BHAROSA AAPKA
+          </h1>
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            {/* Left: Main Content */}
+            <div className="text-left">
+              <div className="flex items-center mb-6">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#96b0e0]">
+                  <Typewriter
+                    words={[
+                      "Custom Tape Solutions for your Business",
+                      "Premium Adhesive Tapes Designed to Perform",
+                      "Reliable Solutions for Every Industry",
+                    ]}
+                    loop={0}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={60}
+                    deleteSpeed={30}
+                    delaySpeed={2000}
+                  />
+                </span>
+              </div>
+              <p className="text-lg md:text-xl mb-8 max-w-xl leading-relaxed text-gray-950">
+                Strong, reliable, and customizable tapes for packaging,
+                insulation, branding, and industrial needs. Quality you can
+                trust—performance you expect.
+              </p>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <a href="#contact">
+                  <button className="group relative px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:scale-105 transition-all duration-300 bg-gradient-to-r from-[#6985bc] via-[#7895d0] to-[#96b0e0] text-white">
+                    <span className="relative z-10">Get a Quote</span>
+                  </button>
+                </a>
+                <a href="/services">
+                  <button className="group relative px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:scale-105 transition-all duration-300 border border-[#7895d0] bg-white text-[#7895d0]">
+                    <span className="relative z-10">View Products</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+            {/* Right: Carousel */}
+            <div className="relative hidden lg:block">
+              <div className="relative w-full aspect-square">
+                {/* BG Stack */}
+                <div className="absolute inset-0 transition-all duration-1000 ease-out -z-10">
+                  <div
+                    className="absolute inset-0 rounded-3xl"
+                    style={{
+                      background: `linear-gradient(135deg, #96b0e0 40%, #acb6c7 70%, #ffffff 100%)`,
+                      transform: `rotate(${
+                        (currentImageIndex - 2) * 2
+                      }deg) scale(${1 + (currentImageIndex % 2) * 0.08})`,
+                      transition: "all 1s",
+                    }}
+                  />
+                </div>
+                <div className="absolute inset-0 transition-all duration-1000 ease-out -z-10">
+                  <div
+                    className="absolute inset-0 rounded-3xl"
+                    style={{
+                      background: `linear-gradient(150deg, #96b0e0 40%, #acb6c7 70%, #ffffff 100%)`,
+                      transform: `rotate(${
+                        (currentImageIndex - 2) * 5
+                      }deg) scale(${1 + (currentImageIndex % 2) * 0.08})`,
+                      transition: "all 1s",
+                    }}
+                  />
+                </div>
+                <div className="absolute inset-0 transition-all duration-1000 ease-out -z-10">
+                  <div
+                    className="absolute inset-0 rounded-3xl"
+                    style={{
+                      background: `linear-gradient(150deg, #96b0e0 40%, #acb6c7 70%, #ffffff 100%)`,
+                      transform: `rotate(${
+                        (currentImageIndex - 2) * 9
+                      }deg) scale(${1 + (currentImageIndex % 2) * 0.08})`,
+                      transition: "all 1s",
+                    }}
+                  />
+                </div>
+                {/* Carousel */}
+                <div className="relative bg-white/80 rounded-3xl p-8 border-4 border-[#6985bc] shadow-2xl h-full flex flex-col justify-between">
+                  {/* Company Name Top Border */}
+                  <div className="absolute top-0 px-2 text-[#6985bc] font-bold tracking-wide text-xl pointer-events-none">
+                    Power Fixit Tape Industries
+                  </div>
+                  {/* Carousel Image & Content */}
+                  <div
+                    ref={carouselRef}
+                    className="aspect-square rounded-2xl overflow-hidden relative cursor-grab active:cursor-grabbing flex flex-col"
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseUp}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                   >
-                    {slide.headline}
-                  </motion.h1>
-                  <motion.p
-                    className="text-lg md:text-2xl max-w-2xl mb-8 font-medium text-white/90 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                  >
-                    {slide.sub}
-                  </motion.p>
-                  <motion.div
-                    className="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto justify-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                  >
-                    <a
-                      href="#services"
-                      className="bg-[#b07a3c] hover:bg-[#a86b2d] text-white font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center"
+                    <div
+                      className="w-full h-full transition-transform duration-300 ease-out"
+                      style={{ transform: `translateX(${dragOffset}px)` }}
                     >
-                      View Our Products
-                    </a>
-                    <a
-                      href="#contact"
-                      className="bg-white hover:bg-[#f3e7d2] text-[#1a2341] font-bold px-7 py-3 rounded-full shadow-lg text-lg transition-all duration-200 text-center border border-[#b07a3c]"
-                    >
-                      Get a Quote
-                    </a>
-                  </motion.div>
+                      <img
+                        src={carouselImages[currentImageIndex].src}
+                        alt={carouselImages[currentImageIndex].alt}
+                        className="w-full h-full object-full bg-white"
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/40 via-transparent to-transparent pb-2">
+                        <div className="p-6 w-full">
+                          <h3 className="text-2xl font-bold mb-1 text-white">
+                            {carouselImages[currentImageIndex].title}
+                          </h3>
+                          <p className="text-lg text-gray-200">
+                            {carouselImages[currentImageIndex].description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </div>
+          </div>
+          {/* Scroll indicator */}
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#acb6c7"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
-      <motion.div initial={{ width:4000, height:4000}} animate={{width:0, height:0}} transition={{ duration: 0.8, delay: 0.5 }} className="absolute rounded-full bg-[#b07a3c] z-10"></motion.div>
     </section>
   );
 }

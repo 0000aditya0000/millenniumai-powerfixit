@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function CallToAction() {
   return (
     <motion.section
-      className="w-full bg-[#b07a3c] py-12 flex justify-center items-center relative overflow-hidden"
+      className="w-full bg-[#7895d0] py-12 flex justify-center items-center relative overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -15,10 +15,10 @@ export default function CallToAction() {
       </svg>
       <div className="max-w-3xl text-center relative z-10">
         <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">Ready to Experience Premium Tapes?</h2>
-        <p className="text-white/90 mb-6 leading-relaxed">Contact us today for a quote or to discuss your custom requirements.</p>
+        <p className="text-black mb-6 leading-relaxed">Contact us today for a quote or to discuss your custom requirements.</p>
         <motion.a
-          href="#contact"
-          className="bg-white text-[#b07a3c] font-bold px-8 py-3 rounded-full shadow-lg text-lg transition-all duration-200 hover:bg-[#f3e7d2] inline-block focus:outline-none focus:ring-2 focus:ring-[#b07a3c] hover:scale-105"
+          href="/testimonials"
+          className="bg-white text-black hover:bg-[#adc0dd] font-bold px-8 py-3 rounded-full shadow-lg text-lg transition-all duration-200 inline-block focus:outline-none focus:ring-2 focus:ring-[#b07a3c] hover:scale-105"
           whileHover={{ scale: 1.08, boxShadow: "0 8px 32px 0 rgba(176,122,60,0.25)" }}
           whileTap={{ scale: 0.97 }}
         >
